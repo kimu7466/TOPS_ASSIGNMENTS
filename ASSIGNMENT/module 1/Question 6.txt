@@ -1,0 +1,32 @@
+Q.6 What is Use case Diagram? Create a use-case on bill payment on paytm.
+
+Certainly! A Use Case Diagram is like a map that shows how users (or actors) interact with a system to achieve specific goals or perform tasks. It focuses on what users can do with the system and helps in understanding the functionalities from a user's perspective.
+
+For example, let's create a simple Use Case Diagram for the bill payment feature on Paytm:
+
+In the diagram:
+
+- Actor: User (the person using the Paytm app).
+- Use Cases: Actions or tasks the user can perform:
+  - View Bills: User can see the list of bills to pay.
+  - Select Bill for Payment: User picks a specific bill to pay.
+  - Choose Payment Method: User selects how to pay (like using a credit card, debit card, or Paytm wallet).
+  - Make Payment: User confirms the payment.
+  - Receive Payment Confirmation: User gets a confirmation after successful payment.
+
+Here's a simple representation:
+
+            User
+             |
+     +-------|-------+
+     |               |
+  View Bills  Select Bill
+     |         for Payment
+     |               |
+ Choose Payment    Make Payment
+      |              |
+      +-----|--------+
+            |
+ Receive Payment Confirmation
+
+This diagram explains how a user interacts with the Paytm app to pay bills. The user can view bills, select one to pay, choose a payment method, make the payment, and finally receive a confirmation.

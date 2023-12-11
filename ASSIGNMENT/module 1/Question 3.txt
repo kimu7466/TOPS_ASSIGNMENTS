@@ -1,0 +1,23 @@
+Q.3 What is SDLC? Explain each phase of SDLC
+
+ans.
+
+SDLC stands for Software Development Life Cycle. It is a systematic process used by software developers to create, maintain, and manage software efficiently. SDLC consists of several distinct phases, each with its own objectives, deliverables, and activities. 
+
+The Software Development Life Cycle (SDLC) consists of several phases:
+
+1. Planning: Identifying what needs to be done, setting goals, defining scope, and creating a project plan.
+
+2. Analysis: Gathering requirements, understanding user needs, and defining the software's functionalities.
+
+3. Design: Creating a blueprint or architecture for the software based on the gathered requirements.
+
+4. Implementation: Writing actual code or programming based on the design specifications.
+
+5. Testing: Checking the software for bugs, errors, and ensuring it meets the defined requirements.
+
+6. Deployment: Releasing the software for use, including installation and configuration.
+
+7. Maintenance: Regularly updating and fixing issues to ensure the software operates smoothly and meets evolving needs.
+
+Each phase has its specific goals and activities, contributing to the overall development and deployment of software products.
