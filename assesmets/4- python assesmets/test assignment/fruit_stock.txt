@@ -1,0 +1,3 @@
+Fruit Stock:
+apple: Quantity - 10 kg, Price - 2.5 per kg
+banana: Quantity - 15 kg, Price - 1.8 per kg

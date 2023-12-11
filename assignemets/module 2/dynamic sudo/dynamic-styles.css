@@ -1,0 +1,12 @@
+/* Styling the box */
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+/* Dynamic pseudo-class - Change color on hover */
+.box:hover {
+    background-color: #45a049;
+}

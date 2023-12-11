@@ -1,0 +1,9 @@
+Q. 8) In how many ways can a CSS be integrated as a web page? 
+
+Ways CSS Can Be Integrated in a Web Page:
+External CSS: Create a separate .css file and link it in the HTML file using <link> tag.
+Internal CSS: Include CSS within the <style> tag inside the <head> section of HTML.
+Inline CSS: Apply CSS directly to an HTML element using the style attribute.
+I'll now create three pages demonstrating these methods: external, internal, and inline CSS. Then, I'll proceed to create the provided page using HTML and CSS.
+
+Let's break down the tasks and tackle them one by one:

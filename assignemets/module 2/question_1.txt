@@ -1,0 +1,15 @@
+Sure, here are definitions for the terms related to the web:
+
+1. Website: A website is a collection of related web pages that are typically identified by a common domain name and hosted on at least one web server. It can contain various types of content such as text, images, videos, and interactive elements.
+
+2. Webpage: A webpage is a single document that is part of a website and is accessed through a web browser. It consists of content that is created using HTML (Hypertext Markup Language), CSS (Cascading Style Sheets), JavaScript, and other web technologies. Webpages can contain text, images, hyperlinks, multimedia elements, and more.
+
+3. Web Browser: A web browser is a software application used to access, view, and navigate web pages on the internet. Popular web browsers include Google Chrome, Mozilla Firefox, Safari, Microsoft Edge, and Opera. They interpret HTML, CSS, and other web technologies to display web content to users.
+
+4. Web Server: A web server is a computer system or software that hosts websites and serves web content to users over the internet. It responds to requests from web browsers by delivering web pages, files, and other resources to the client devices.
+
+5. HTML (Hypertext Markup Language): HTML is the standard markup language used for creating web pages. It defines the structure and content of a webpage by using various elements and tags to describe the different parts of the page, such as headings, paragraphs, images, links, and more.
+
+6. CSS (Cascading Style Sheets): CSS is a style sheet language used for describing the presentation and layout of HTML documents. It enables web developers to control the appearance of web pages by defining styles for elements like fonts, colors, layout, and other visual aspects.
+
+Understanding these terms helps in comprehending the basics of how content is created, displayed, and served over the World Wide Web.

@@ -1,0 +1,214 @@
+#1. What do you understand By Database 
+==>
+A database is like a digital filing cabinet where information is stored. It's organized into tables, similar to spreadsheets, with rows for individual items or records, and columns for specific details about those items.
+
+Here are some key points:
+
+1. Data Storage: A database stores information in an organized way, making it easy to find and manage. It's like a collection of organized digital boxes where we keep our data.
+
+2. Software to Manage: There's special software called a Database Management System (DBMS) that helps us interact with the database. It allows us to add, retrieve, update, and remove data.
+
+3. Structured Information: The data is structured into tables, making it easier to understand and work with. Each table has rows (like individual items) and columns (like details or attributes of those items).
+
+4. Querying and Retrieval: We can ask the database questions using a language called SQL (Structured Query Language) to find specific information or perform calculations.
+
+5. Data Integrity: Databases ensure the accuracy and consistency of data through rules and constraints. For example, they prevent duplicates or require certain information to be present.
+
+6. Security: Databases have security features to control who can access the data and what they can do with it, ensuring data is kept safe.
+
+7. Scalability and Performance: They're designed to handle large amounts of data efficiently and quickly, even as the amount of data grows.
+
+In short, a database is like a well-organized digital storage system that allows us to manage, access, and work with our data effectively.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#2. What is Normalization? 
+==>
+Normalization is a process used in databases to organize and structure data efficiently. It helps to minimize redundancy (repetition) and ensures data consistency.
+
+In simpler terms, it's like organizing your stuff in a logical way to avoid having the same things in multiple places. This makes it easier to manage and update information without causing confusion or inconsistencies.
+
+Normalization involves breaking down data into smaller, related tables and using relationships between these tables to reduce duplication and make data retrieval and maintenance more efficient. The aim is to make the database more organized, easier to use, and less prone to errors.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#3. What is Difference between DBMS and RDBMS? 
+==>
+ DBMS (Database Management System): It's like a software toolbox that helps manage databases. DBMS allows storing, retrieving, updating, and managing data in a database. It doesn't necessarily require data to be stored in a specific structured format.
+
+ RDBMS (Relational Database Management System):It's a type of DBMS that organizes data in a tabular format with rows and columns. RDBMS uses tables to store and manage data, and it establishes relationships between these tables. It also supports SQL (Structured Query Language) for querying and managing data.
+
+In short, while all RDBMS are DBMS, not all DBMS are RDBMS. RDBMS is a specific type of DBMS that organizes data in a structured way using tables with relationships between them.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#4. What is MF Cod Rule of RDBMS Systems? 
+==>
+Codd's Rules, also known as Codd's 12 Rules, are a set of principles and criteria that were proposed by Dr. E.F. Codd, the inventor of the relational model for database management, to define the characteristics and requirements of a true relational database management system (RDBMS). These rules are used to evaluate and ensure the purity of a relational database system. Here are the original 12 Codd's Rules:
+
+ Rule 0: The Information Rule
+- All information in the database is to be represented in one and only one way, as values in a table.
+
+ Rule 1: The Information Rule
+- Information is to be presented to users in the form of tables, and only information that is of interest to the user should be visible.
+
+ Rule 2: The Guaranteed Access Rule
+- Each data value in the database should be accessible by specifying a table name, primary key value, and column name.
+
+ Rule 3: Systematic Treatment of Null Values
+- Null values (missing data) should be supported in a systematic and consistent manner.
+
+ Rule 4: Dynamic Online Catalog Based on The Relational Model
+- The database catalog (metadata) must be stored in tables, and must be accessible to authorized users using the same query language used to access the data.
+
+ Rule 5: Comprehensive Data Sublanguage Rule
+- The system must support a data sublanguage that is a proper subset of the relational calculus and the relational algebra. This language should be used for all data manipulation.
+
+ Rule 6: View Updating Rule
+- All views that are theoretically updatable should be updatable by the system.
+
+ Rule 7: High-level Insert, Update, and Delete
+- The system must support high-level insertion, updating, and deletion of data.
+
+ Rule 8: Physical Data Independence
+- Changes to the physical storage and access mechanisms of data should not require changes to the application programs.
+
+ Rule 9: Logical Data Independence
+- Changes to the logical structure (table structures) should not require changes to the application programs.
+
+ Rule 10: Integrity Independence
+- Integrity constraints (e.g., primary keys, foreign keys, check constraints) should be specified and enforced separately from application programs.
+
+ Rule 11: Distribution Independence
+- The distribution of data should not affect the user's view of the data.
+
+ Rule 12: Non-subversion Rule
+- If a system provides a low-level (record-at-a-time) interface, it must also provide access to the data at a high level (set-at-a-time). This is to prevent the system from being bypassed to perform unauthorized operations.
+
+These rules collectively define the characteristics of a relational database management system (RDBMS) and serve as a standard for evaluating the relational capabilities of database systems. It's important to note that while many database management systems claim to be relational databases, not all of them strictly adhere to all of Codd's 12 Rules. However, adhering to these rules is a hallmark of a true RDBMS.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#5. What do you understand By Data Redundancy?
+==>
+Data redundancy refers to the situation where the same piece of data is stored in multiple places within a database or across different databases. 
+
+In simpler terms, it's like having duplicate copies of the same information. This duplication can lead to inconsistency, confusion, and wastage of storage space. Changes made to one copy might not get reflected in all other copies, causing discrepancies and making it harder to manage the data.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#6. What is DDL Interpreter? 
+==>
+In the context of databases, there isn't a specific entity referred to as a "DDL Interpreter." However, the term likely relates to the DDL (Data Definition Language) in a Database Management System (DBMS).
+
+DDL is a set of SQL commands used to define and manage the structure of the database. It includes commands like `CREATE`, `ALTER`, `DROP`, and `TRUNCATE` that deal with creating, modifying, and deleting database objects such as tables, indexes, views, etc.
+
+An "interpreter" in the context of programming usually refers to a program or part of a program that reads and executes commands or statements. So, a "DDL interpreter" would refer to the component within a DBMS that interprets and executes DDL commands to define and modify the database structure based on the provided commands.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#7. What is DML Compiler in SQL? 
+==>
+In SQL (Structured Query Language), DML stands for Data Manipulation Language. It consists of commands used to manage data within a database. DML commands primarily include INSERT, UPDATE, DELETE, and SELECT, which respectively add new data, modify existing data, remove data, and retrieve data from a database.
+
+A DML compiler in SQL is a component responsible for interpreting and executing Data Manipulation Language (DML) statements. It is part of the database management system (DBMS) and handles the processing of DML commands issued by users or applications.
+
+The DML compiler takes SQL queries written by users or applications, checks their syntax and semantics, performs query optimization (in some cases), and generates an execution plan. This plan outlines the steps the database engine will follow to efficiently retrieve or modify the requested data.
+
+The DML compiler's tasks may include:
+
+1. Syntax and semantic analysis: Verifying the correctness of the SQL statements provided by users or applications, checking for proper syntax and ensuring they adhere to the database schema.
+
+2. Query optimization: Analyzing the query and determining the most efficient way to retrieve or manipulate data. This involves selecting the best execution plan to optimize performance, often through techniques like index selection, join reordering, and other optimization strategies.
+
+3. Execution plan generation: Creating a plan that details how the database engine should execute the query or DML statement. This plan outlines the sequence of operations necessary to fulfill the request and includes the steps for data retrieval, modification, or deletion.
+
+Overall, the DML compiler plays a vital role in processing DML statements efficiently within a database system, ensuring that data manipulation operations are performed accurately and with optimal performance.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#8. What is SQL Key Constraints writing an Example of SQL Key Constraints 
+==>
+In SQL, key constraints are used to enforce uniqueness and integrity within a table. There are several types of key constraints, including primary keys, unique keys, and foreign keys.
+
+Here are the key constraints and their explanations:
+
+1. Primary Key Constraint: A primary key is a column or a set of columns that uniquely identifies each row in a table. It must contain unique values and cannot have NULL values.
+
+2. Unique Constraint: A unique constraint ensures that all values in a column (or a set of columns) are unique, except for NULL values. Unlike a primary key, a table can have multiple unique constraints.
+
+3. Foreign Key Constraint: A foreign key is a field in one table that refers to the primary key in another table. It establishes a relationship between two tables and enforces referential integrity.
+
+Example of SQL Key Constraints:
+Let's create a simple example using SQL to demonstrate key constraints:
+#####################################################################
+-- Creating a table with a Primary Key constraint
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    EmployeeName VARCHAR(50),
+    DepartmentID INT
+);
+
+-- Adding a Unique Constraint
+ALTER TABLE Employees
+ADD CONSTRAINT UC_DepartmentID UNIQUE (DepartmentID);
+
+-- Creating another table with a Foreign Key constraint
+CREATE TABLE Departments (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(50)
+);
+
+-- Adding a Foreign Key Constraint referencing the Departments table
+ALTER TABLE Employees
+ADD CONSTRAINT FK_DepartmentID FOREIGN KEY (DepartmentID)
+REFERENCES Departments(DepartmentID);
+
+#####################################################################
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#9. What is save Point? How to create a save Point write a Query? 
+==>
+In SQL, a savepoint is a named marker within a transaction that allows you to roll back to a specific point within the transaction without rolling back the entire transaction. Savepoints are useful when you want to divide a transaction into smaller parts and selectively rollback to a particular point in case of an error or specific condition.
+
+Here's an example of how to create a savepoint in SQL:
+#####################################################################
+-- Starting a transaction
+START TRANSACTION;
+
+-- Creating a savepoint named 'sp1'
+SAVEPOINT sp1;
+
+-- Perform some SQL operations within the transaction
+-- For instance, inserting/updating/deleting records
+INSERT INTO your_table (column1, column2) VALUES ('value1', 'value2');
+
+-- Checking the data or performing further operations
+SELECT * FROM your_table;
+
+-- If needed, rollback to the savepoint 'sp1' (partial rollback)
+ROLLBACK TO SAVEPOINT sp1;
+
+-- Perform more operations or commit the transaction
+-- If everything is fine and no rollback needed
+COMMIT;
+#####################################################################
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#10. What is trigger and how to create a Trigger in SQL? 
+==>
+In SQL, a trigger is a database object that is associated with a specific table and is automatically executed or fired in response to certain events or actions (such as INSERT, UPDATE, DELETE) occurring on that table. Triggers are used to enforce constraints, maintain data integrity, implement business rules, and automate tasks within a database.
+
+There are two main types of triggers in SQL:
+
+1. Row-level Triggers: These triggers are fired for each row affected by the triggering event (e.g., for each row being inserted, updated, or deleted).
+
+2. Statement-level Triggers: These triggers are fired once for each SQL statement, regardless of the number of rows affected by the statement.
+
+Here's an example of how to create a simple trigger in SQL:
+#####################################################################
+-- Creating a trigger that activates after an INSERT operation on a table
+CREATE TRIGGER trigger_name
+AFTER INSERT ON your_table
+FOR EACH ROW
+BEGIN
+    -- SQL statements to be executed when the trigger is fired
+    -- For example, you might perform some actions or update other tables based on the inserted data
+    INSERT INTO audit_table (column1, column2, action_type)
+    VALUES (NEW.column1, NEW.column2, 'INSERT');
+END;
+
+#####################################################################
