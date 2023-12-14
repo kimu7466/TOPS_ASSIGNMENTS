@@ -1,10 +1,5 @@
 import datetime
 
-
-# fruit_manager.py
-
-# Dictionary to store fruit stock (initially empty)
-# fruit_stock = {}
 fruit_stock = {'apple': {'quantity': 10, 'price': 2.5}, 'banana': {'quantity': 15, 'price': 1.8}}
 
 def display_manager_menu():
@@ -13,16 +8,12 @@ def display_manager_menu():
     print("\t\t\t 2) View Fruit Stock")
     print("\t\t\t 3) Update Fruit Stock\n")
 
-    pass
-
-def write_to_the_text_file(filename):
+def write_to_text_file(filename):
     with open(filename, 'w') as file:
-        file.write("fruit stock : \n")
+        file.write("Fruit Stock:\n")
         for fruit, details in fruit_stock.items():
             file.write(f"{fruit}: Quantity - {details['quantity']} kg, Price - {details['price']} per kg\n")
 
-
-# Function to add fruit stock
 def add_fruit_stock():
     while True:
         fruit_name = input("Enter fruit name: ")
@@ -39,24 +30,17 @@ def add_fruit_stock():
         
         choice = input("Do you want to perform more operations? (y/n): ")
         if choice.lower() != 'y':
-            break        
-        
-        pass
+            break
 
-# Function to view fruit stock
 def view_fruit_stock():
     if not fruit_stock:
         print("Fruit stock is empty.")
     else:
         print("Fruit Stock:\n")
         for fruit, details in fruit_stock.items():
-            print(f"{fruit}: Quantity - {details['quantity']} kg, \n Price - {details['price']} per kg \n\n")
+            print(f"{fruit}: Quantity - {details['quantity']} kg, Price - {details['price']} per kg\n")
 
-        pass
-
-# Function to update fruit stock
 def update_fruit_stock():
-
     while True:
         fruit_name = input("Enter fruit name to update: ")
         if fruit_name in fruit_stock:
@@ -75,16 +59,13 @@ def update_fruit_stock():
         else:
             print(f"{fruit_name} not found in stock.")
 
-        pass
-
-
 def create_log_file(message):
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open('log.txt', 'a') as file:
         file.write(f"{timestamp}: {message}\n")
 
-# If this module is run directly, execute a simple test scenario
-if __name__ == "__main__":
-    add_fruit_stock()
-    view_fruit_stock()
-    
+def save_fruit_stock_to_file():
+    write_to_text_file('fruit_stock.txt')
+    create_log_file("Fruit stock saved to text file.")
+
+save_fruit_stock_to_file()
