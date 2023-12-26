@@ -3,7 +3,7 @@
 class Course:
     def info(self, student_name, course_name):
         print(f"Course: {course_name}, Student: {student_name}")
-       
+
 class Faculty(Course):
     def detail(self, faculty_name, branch):
         print(f"Faculty: {faculty_name}, Branch: {branch}")

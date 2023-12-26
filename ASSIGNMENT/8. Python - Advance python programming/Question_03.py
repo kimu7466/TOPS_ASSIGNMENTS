@@ -3,5 +3,5 @@
 # To append data into a file:
  
 file = open('output.txt', 'a')
-file.write("this is a python programming")
+file.write("this is a python programming,1 \n")
 file.close()

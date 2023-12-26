@@ -1,3 +1,6 @@
 Fruit Stock:
-apple: Quantity - 10 kg, Price - 2.5 per kg
-banana: Quantity - 15 kg, Price - 1.8 per kg
+apple: Quantity - 25.0 kg, Price - 150.0 per kg
+banana: Quantity - 25.0 kg, Price - 60.0 per kg
+cherry: Quantity - 65.0 kg, Price - 25.0 per kg
+black berry: Quantity - 45.0 kg, Price - 65.0 per kg
+papaya: Quantity - 250.0 kg, Price - 25.0 per kg

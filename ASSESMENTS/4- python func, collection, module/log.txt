@@ -1,2 +1,111 @@
-2023-12-14 16:58:36: Fruit stock saved to text file.
-2023-12-17 11:21:36: Fruit stock saved to text file.
+2023-12-27 00:11:50: ADD - Added 150.0 kg of apple at 250.0 per kg.
+2023-12-27 00:12:05: ADD - Added 1254.0 kg of banana at 75.0 per kg.
+2023-12-27 00:12:09: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 250.0 & quantity 200.0
+2023-12-27 00:12:09: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 75.0 & quantity 1299.0
+2023-12-27 00:12:11: VIEW - Viewed Fruit Stock
+2023-12-27 00:12:11: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 250.0 & quantity 200.0
+2023-12-27 00:12:11: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 75.0 & quantity 1299.0
+2023-12-27 00:16:42: VIEW - Viewed Fruit Stock
+2023-12-27 00:16:42: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 250.0 & quantity 200.0
+2023-12-27 00:16:42: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 75.0 & quantity 1299.0
+2023-12-27 00:17:07: UPDATE - Updated banana stock to 1150.0 kg and price to 120.0 per kg.
+2023-12-27 00:17:33: UPDATE - Updated apple stock to 1000.0 kg and price to 220.0 per kg.
+2023-12-27 00:18:21: UPDATE - Updated apple stock to 700.0 kg and price to 120.0 per kg.
+2023-12-27 00:18:47: UPDATE - Updated banana stock to 980.0 kg and price to 75.0 per kg.
+2023-12-27 00:18:49: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 120.0 & quantity 700.0
+2023-12-27 00:18:49: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 75.0 & quantity 980.0
+2023-12-27 00:21:11: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 120.0 & quantity 700.0
+2023-12-27 00:21:11: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 75.0 & quantity 980.0
+2023-12-27 00:22:26: ADD - Added 1050.0 kg of cherry at 155.0 per kg.
+2023-12-27 00:22:40: ADD - Added 1560.0 kg of pineapple at 80.0 per kg.
+2023-12-27 00:23:04: ADD - Added 2000.0 kg of watermelon at 60.0 per kg.
+2023-12-27 00:23:07: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 120.0 & quantity 700.0
+2023-12-27 00:23:07: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 75.0 & quantity 980.0
+2023-12-27 00:23:07: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 155.0 & quantity 1050.0
+2023-12-27 00:23:07: STATUS_CHANGE - Status for pineapple has been changed in stock. Changes: price 80.0 & quantity 1560.0
+2023-12-27 00:23:07: STATUS_CHANGE - Status for watermelon has been changed in stock. Changes: price 60.0 & quantity 2000.0
+2023-12-27 00:23:15: VIEW - Viewed Fruit Stock
+2023-12-27 00:23:15: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 120.0 & quantity 700.0
+2023-12-27 00:23:15: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 75.0 & quantity 980.0
+2023-12-27 00:23:15: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 155.0 & quantity 1050.0
+2023-12-27 00:23:15: STATUS_CHANGE - Status for pineapple has been changed in stock. Changes: price 80.0 & quantity 1560.0
+2023-12-27 00:23:15: STATUS_CHANGE - Status for watermelon has been changed in stock. Changes: price 60.0 & quantity 2000.0
+2023-12-27 00:33:46: VIEW - Viewed Fruit Stock
+2023-12-27 00:33:46: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 120.0 & quantity 700.0
+2023-12-27 00:33:46: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 75.0 & quantity 980.0
+2023-12-27 00:33:46: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 155.0 & quantity 1050.0
+2023-12-27 00:33:46: STATUS_CHANGE - Status for pineapple has been changed in stock. Changes: price 80.0 & quantity 1560.0
+2023-12-27 00:33:46: STATUS_CHANGE - Status for watermelon has been changed in stock. Changes: price 60.0 & quantity 2000.0
+2023-12-27 00:41:50: VIEW - Viewed Fruit Stock
+2023-12-27 00:41:50: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 120.0 & quantity 700.0
+2023-12-27 00:41:50: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 75.0 & quantity 980.0
+2023-12-27 00:41:50: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 155.0 & quantity 1050.0
+2023-12-27 00:41:50: STATUS_CHANGE - Status for pineapple has been changed in stock. Changes: price 80.0 & quantity 1560.0
+2023-12-27 00:41:50: STATUS_CHANGE - Status for watermelon has been changed in stock. Changes: price 60.0 & quantity 2000.0
+2023-12-27 00:42:07: ADD - Added 25.0 kg of apple at 15.0 per kg.
+2023-12-27 00:42:15: ADD - Added 45.0 kg of banana at 150.0 per kg.
+2023-12-27 00:42:23: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 15.0 & quantity 725.0
+2023-12-27 00:42:23: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 150.0 & quantity 1025.0
+2023-12-27 00:42:23: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 155.0 & quantity 1050.0
+2023-12-27 00:42:23: STATUS_CHANGE - Status for pineapple has been changed in stock. Changes: price 80.0 & quantity 1560.0
+2023-12-27 00:42:23: STATUS_CHANGE - Status for watermelon has been changed in stock. Changes: price 60.0 & quantity 2000.0
+2023-12-27 00:42:25: VIEW - Viewed Fruit Stock
+2023-12-27 00:42:25: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 15.0 & quantity 725.0
+2023-12-27 00:42:25: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 150.0 & quantity 1025.0
+2023-12-27 00:42:25: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 155.0 & quantity 1050.0
+2023-12-27 00:42:25: STATUS_CHANGE - Status for pineapple has been changed in stock. Changes: price 80.0 & quantity 1560.0
+2023-12-27 00:42:25: STATUS_CHANGE - Status for watermelon has been changed in stock. Changes: price 60.0 & quantity 2000.0
+2023-12-27 00:44:41: VIEW - Viewed Fruit Stock
+2023-12-27 00:44:41: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 15.0 & quantity 725.0
+2023-12-27 00:44:41: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 150.0 & quantity 1025.0
+2023-12-27 00:44:41: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 155.0 & quantity 1050.0
+2023-12-27 00:44:41: STATUS_CHANGE - Status for pineapple has been changed in stock. Changes: price 80.0 & quantity 1560.0
+2023-12-27 00:44:41: STATUS_CHANGE - Status for watermelon has been changed in stock. Changes: price 60.0 & quantity 2000.0
+2023-12-27 00:45:13: UPDATE - Updated apple stock to 2500.0 kg and price to 150.0 per kg.
+2023-12-27 00:45:30: UPDATE - Updated banana stock to 2700.0 kg and price to 75.0 per kg.
+2023-12-27 00:45:43: UPDATE - Updated cherry stock to 3000.0 kg and price to 200.0 per kg.
+2023-12-27 00:46:26: UPDATE - Updated watermelon stock to 3500.0 kg and price to 170.0 per kg.
+2023-12-27 00:46:29: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 2500.0
+2023-12-27 00:46:29: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 75.0 & quantity 2700.0
+2023-12-27 00:46:29: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 200.0 & quantity 3000.0
+2023-12-27 00:46:29: STATUS_CHANGE - Status for pineapple has been changed in stock. Changes: price 80.0 & quantity 1560.0
+2023-12-27 00:46:29: STATUS_CHANGE - Status for watermelon has been changed in stock. Changes: price 170.0 & quantity 3500.0
+2023-12-27 00:46:30: VIEW - Viewed Fruit Stock
+2023-12-27 00:46:30: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 2500.0
+2023-12-27 00:46:30: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 75.0 & quantity 2700.0
+2023-12-27 00:46:30: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 200.0 & quantity 3000.0
+2023-12-27 00:46:30: STATUS_CHANGE - Status for pineapple has been changed in stock. Changes: price 80.0 & quantity 1560.0
+2023-12-27 00:46:30: STATUS_CHANGE - Status for watermelon has been changed in stock. Changes: price 170.0 & quantity 3500.0
+2023-12-27 01:16:05: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 2500.0
+2023-12-27 01:16:05: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 75.0 & quantity 2700.0
+2023-12-27 01:16:05: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 200.0 & quantity 3000.0
+2023-12-27 01:16:05: STATUS_CHANGE - Status for pineapple has been changed in stock. Changes: price 80.0 & quantity 1560.0
+2023-12-27 01:16:05: STATUS_CHANGE - Status for watermelon has been changed in stock. Changes: price 170.0 & quantity 3500.0
+2023-12-27 01:16:24: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 2500.0
+2023-12-27 01:16:24: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 75.0 & quantity 2700.0
+2023-12-27 01:16:24: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 200.0 & quantity 3000.0
+2023-12-27 01:16:24: STATUS_CHANGE - Status for pineapple has been changed in stock. Changes: price 80.0 & quantity 1560.0
+2023-12-27 01:16:24: STATUS_CHANGE - Status for watermelon has been changed in stock. Changes: price 170.0 & quantity 3500.0
+2023-12-27 01:17:13: ADD - Added 25.0 kg of apple at 150.0 per kg.
+2023-12-27 01:17:23: ADD - Added 25.0 kg of banana at 60.0 per kg.
+2023-12-27 01:17:25: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 01:17:25: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 01:17:56: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 01:17:56: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 01:20:56: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 01:20:56: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 01:24:03: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 01:24:03: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 01:24:27: ADD - Added 65.0 kg of cherry at 25.0 per kg.
+2023-12-27 01:24:58: ADD - Added 45.0 kg of black berry at 65.0 per kg.
+2023-12-27 01:25:35: ADD - Added 250.0 kg of papaya at 25.0 per kg.
+2023-12-27 01:25:37: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 01:25:37: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 01:25:37: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 01:25:37: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 01:25:37: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 01:25:40: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 01:25:40: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 01:25:40: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 01:25:40: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 01:25:40: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0

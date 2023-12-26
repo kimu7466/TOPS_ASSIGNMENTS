@@ -6,9 +6,23 @@ The file function takes two arguments: the filename and the mode. The mode argum
 '''
 
 # To create file:
-open('file_name.txt', 'x')
+# open('file_name.txt', 'x')
 
 # To Write file:
 file = open('file_name.txt', 'w') 
-file.write("this is a python programming")
+file.write("this is a python programming, and i am going to learn it.\n")
+file.write("this is a python programming, and i am going to learn it.\n")
+file.write("this is a python programming, and i am going to learn it.\n")
+file.write("this is a python programming, and i am going to learn it.\n")
+file.write("this is a python programming, and i am going to learn it.\n")
+file.write("this is a python programming, and i am going to learn it.\n" * 50)
+file.close()
+
+
+# open("test.txt",'x')
+
+file=open('test.txt','w')
+
+file.write("this is a test file, for python programming file handling \n"*10)
+
 file.close()

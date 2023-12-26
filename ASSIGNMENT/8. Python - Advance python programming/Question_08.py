@@ -2,7 +2,7 @@
 
 def longest_word(file_name):
 
-  with open(file_name.txt, 'r') as infile:
+  with open('file_name.txt', 'r') as infile:
       words = infile.read().split()
       
   max_len = len(max(words, key = len))

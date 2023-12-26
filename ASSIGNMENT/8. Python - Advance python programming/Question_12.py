@@ -2,4 +2,5 @@
 
 
 import shutil
-shutil.copyfile('file_1','file_2')
+shutil.copyfile('test.txt','file_name.txt')
+

@@ -1,13 +1,4 @@
 import fruit_manager
-import customer
-
-# Function to save fruit stock to a text file
-def save_fruit_stock_to_file():
-    fruit_manager.write_to_text_file('fruit_stock.txt')
-    fruit_manager.create_log_file("Fruit stock saved to text file.")
-
-def display_customer_menu():
-    customer.print_hello()  
 
 def home():
     print("\n\n\t\t\t WELCOME TO THE FRUIT MARKET\n")
@@ -17,61 +8,23 @@ def home():
 
 def run():
     try:
-        x = int(input("select your role : "))
-        if x == 1:
-            fruit_manager.display_manager_menu()
-            y = int(input("enter your choice : "))
-            if y==1 :
-                fruit_manager.add_fruit_stock()
-                home()
-                run()
-
-            elif y==2 :
-                fruit_manager.view_fruit_stock()
-                main_menu = input("enter anything for main menu ")
-                if main_menu==1 :
-                    home()
-                    run()
-                else :
-                    home()
-                    run()
-
-            elif y==3 :
-                fruit_manager.update_fruit_stock()
-                home()
-                run()
-
-            else:
-                print("you have entered a incorrect input, \n please select from below option.")
-                home()
-                run()
-        
-        elif x == 2:
-            customer.print_hello()
-            main_menu = input("enter anything for main menu ")            
-            if main_menu==1 :
-                home()
-                run()
-            else :
-                home()
-                run()
-
-        elif x== 0:
-            print("thanks for coming, visit again.")
-            
-        else:
-            print("Invalid choice! Please select 1 or 2.")
+        while True:
             home()
-            run()
-        
-        pass
-
+            x = input("Select your role: ")
+            
+            if x == "1":
+                fruit_manager.manage_operations()
+            elif x == "2":
+                # Perform operations for customer module
+                print("Customer operations not implemented yet.")
+                # Add your customer operations here
+            elif x == "0":
+                print("Thanks for coming, visit again.")
+                break
+            else:
+                print("Invalid choice! Please select 1 or 2.")
     except ValueError:
         print("Invalid input! Please enter a valid number.")
-        home()
-        run()
 
-
-home()
-run()
-save_fruit_stock_to_file()
+if __name__ == "__main__":
+    run()
