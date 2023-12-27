@@ -132,3 +132,195 @@
 2023-12-27 12:16:33: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
 2023-12-27 12:16:33: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
 2023-12-27 12:16:33: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 13:41:32: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 13:41:32: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 13:41:32: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 13:41:32: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 13:41:32: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 13:41:35: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 13:41:35: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 13:41:35: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 13:41:35: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 13:41:35: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 15:02:01: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 15:02:01: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 15:02:01: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 15:02:01: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 15:02:01: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:14:46: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 16:14:46: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:14:46: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:14:46: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:14:46: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:15:24: ADD - Added 25.0 kg of guava at 125.0 per kg.
+2023-12-27 16:15:26: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 16:15:26: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:15:26: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:15:26: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:15:26: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:15:26: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:15:35: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 16:15:35: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:15:35: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:15:35: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:15:35: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:15:35: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:15:54: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 16:15:54: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:15:54: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:15:54: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:15:54: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:15:54: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:16:16: ADD - Added 45.0 kg of graps at 145.0 per kg.
+2023-12-27 16:16:20: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 16:16:20: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:16:20: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:16:20: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:16:20: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:16:20: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:16:20: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:16:21: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 16:16:21: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:16:21: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:16:21: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:16:21: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:16:21: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:16:21: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:18:49: ADD - Added 75.0 kg of straw berry at 450.0 per kg.
+2023-12-27 16:18:50: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 16:18:50: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:18:50: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:18:50: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:18:50: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:18:50: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:18:50: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:18:50: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
+2023-12-27 16:19:16: ADD - Added 145.0 kg of apple at 250.0 per kg.
+2023-12-27 16:19:18: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 250.0 & quantity 170.0
+2023-12-27 16:19:18: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:19:18: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:19:18: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:19:18: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:19:18: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:19:18: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:19:18: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
+2023-12-27 16:19:19: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 250.0 & quantity 170.0
+2023-12-27 16:19:19: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:19:19: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:19:19: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:19:19: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:19:19: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:19:19: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:19:19: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
+2023-12-27 16:20:13: UPDATE - Updated apple stock to 45.0 kg and price to 256.0 per kg.
+2023-12-27 16:20:16: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 256.0 & quantity 45.0
+2023-12-27 16:20:16: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:20:16: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:20:16: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:20:16: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:20:16: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:20:16: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:20:16: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
+2023-12-27 16:20:24: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 256.0 & quantity 45.0
+2023-12-27 16:20:24: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:20:24: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:20:24: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:20:24: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:20:24: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:20:24: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:20:24: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
+2023-12-27 16:21:05: ADD - Added 89.0 kg of apple  at 189.0 per kg.
+2023-12-27 16:21:08: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 256.0 & quantity 45.0
+2023-12-27 16:21:08: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:21:08: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:21:08: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:21:08: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:21:08: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:21:08: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:21:08: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
+2023-12-27 16:21:08: STATUS_CHANGE - Status for apple  has been changed in stock. Changes: price 189.0 & quantity 89.0
+2023-12-27 16:21:10: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 256.0 & quantity 45.0
+2023-12-27 16:21:10: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:21:10: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:21:10: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:21:10: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:21:10: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:21:10: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:21:10: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
+2023-12-27 16:21:10: STATUS_CHANGE - Status for apple  has been changed in stock. Changes: price 189.0 & quantity 89.0
+2023-12-27 16:21:36: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 256.0 & quantity 45.0
+2023-12-27 16:21:36: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:21:36: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:21:36: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:21:36: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:21:36: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:21:36: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:21:36: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
+2023-12-27 16:21:36: STATUS_CHANGE - Status for apple  has been changed in stock. Changes: price 189.0 & quantity 89.0
+2023-12-27 16:21:53: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 256.0 & quantity 45.0
+2023-12-27 16:21:53: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:21:53: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:21:53: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:21:53: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:21:53: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:21:53: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:21:53: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
+2023-12-27 16:21:53: STATUS_CHANGE - Status for apple  has been changed in stock. Changes: price 189.0 & quantity 89.0
+2023-12-27 16:22:35: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 256.0 & quantity 45.0
+2023-12-27 16:22:35: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:22:35: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:22:35: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:22:35: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:22:35: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:22:35: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:22:35: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
+2023-12-27 16:26:14: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 256.0 & quantity 45.0
+2023-12-27 16:26:14: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:26:14: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:26:14: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:26:14: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:26:14: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:26:14: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:26:14: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
+2023-12-27 16:26:49: UPDATE - Updated apple stock to 500.0 kg and price to 150.0 per kg.
+2023-12-27 16:26:51: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 500.0
+2023-12-27 16:26:51: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:26:51: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:26:51: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:26:51: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:26:51: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:26:51: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:26:51: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
+2023-12-27 16:26:52: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 500.0
+2023-12-27 16:26:52: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:26:52: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:26:52: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:26:52: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:26:52: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:26:52: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:26:52: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
+2023-12-27 16:27:00: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 500.0
+2023-12-27 16:27:00: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 16:27:00: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:27:00: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:27:00: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:27:00: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:27:00: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:27:00: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
+2023-12-27 16:27:27: UPDATE - Updated banana stock to 450.0 kg and price to 120.0 per kg.
+2023-12-27 16:27:30: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 500.0
+2023-12-27 16:27:30: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 120.0 & quantity 450.0
+2023-12-27 16:27:30: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:27:30: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:27:30: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:27:30: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:27:30: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:27:30: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
+2023-12-27 16:27:31: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 500.0
+2023-12-27 16:27:31: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 120.0 & quantity 450.0
+2023-12-27 16:27:31: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 16:27:31: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 16:27:31: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 16:27:31: STATUS_CHANGE - Status for guava has been changed in stock. Changes: price 125.0 & quantity 25.0
+2023-12-27 16:27:31: STATUS_CHANGE - Status for graps has been changed in stock. Changes: price 145.0 & quantity 45.0
+2023-12-27 16:27:31: STATUS_CHANGE - Status for straw berry has been changed in stock. Changes: price 450.0 & quantity 75.0
