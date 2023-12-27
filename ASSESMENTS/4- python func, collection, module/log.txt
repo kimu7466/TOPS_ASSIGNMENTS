@@ -109,3 +109,26 @@
 2023-12-27 01:25:40: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
 2023-12-27 01:25:40: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
 2023-12-27 01:25:40: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 12:14:45: STATUS_CHANGE - Status for Fruit Stock has been changed in stock. Changes: price 500.0 & quantity 45.0
+2023-12-27 12:14:45: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 12:14:45: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 12:14:45: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 12:14:45: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 12:14:45: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 12:15:37: STATUS_CHANGE - Status for Fruit Stock has been changed in stock. Changes: price 500.0 & quantity 45.0
+2023-12-27 12:15:37: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 12:15:37: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 12:15:37: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 12:15:37: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 12:15:37: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 12:16:01: STATUS_CHANGE - Status for Fruit Stock has been changed in stock. Changes: price 500.0 & quantity 45.0
+2023-12-27 12:16:01: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 12:16:01: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 12:16:01: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 12:16:01: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 12:16:01: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0
+2023-12-27 12:16:33: STATUS_CHANGE - Status for apple has been changed in stock. Changes: price 150.0 & quantity 25.0
+2023-12-27 12:16:33: STATUS_CHANGE - Status for banana has been changed in stock. Changes: price 60.0 & quantity 25.0
+2023-12-27 12:16:33: STATUS_CHANGE - Status for cherry has been changed in stock. Changes: price 25.0 & quantity 65.0
+2023-12-27 12:16:33: STATUS_CHANGE - Status for black berry has been changed in stock. Changes: price 65.0 & quantity 45.0
+2023-12-27 12:16:33: STATUS_CHANGE - Status for papaya has been changed in stock. Changes: price 25.0 & quantity 250.0

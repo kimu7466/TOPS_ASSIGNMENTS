@@ -15,7 +15,7 @@ def read_from_text_file(filename):
             price = float(price.split('- ')[1].split(' per kg')[0])
             new_fruit_stock[fruit_name] = {'quantity': quantity, 'price': price}
     return new_fruit_stock
-
+ 
 # Initial fruit stock data
 fruit_stock = read_from_text_file('fruit_stock.txt')
 
