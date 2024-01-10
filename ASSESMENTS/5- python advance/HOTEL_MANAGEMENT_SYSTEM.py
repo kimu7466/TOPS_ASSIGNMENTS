@@ -5,7 +5,7 @@ from mysql.connector import Error
 from main_state_districts import states_and_districts
 from GET_INFO_OF_ANY_GUEST import search_by_number
 from SHOW_GUEST_LISTS import show_check_inn_table
-
+from room_availibility import room_status
 
 class HotelManagementApp:
     def __init__(self, root):
@@ -17,83 +17,7 @@ class HotelManagementApp:
 
         self.create_main_interface()
 #############################################################################################
-# ============================ <button3> ==============================
-        def create_room_table(self):
-            try:
-                connection = mysql.connector.connect(
-                    host='localhost',
-                    user='root',
-                    password='root',
-                    database='HOTEL_MANAGEMENT'
-                )
-                cursor = connection.cursor()
-
-                cursor.execute('''
-                    CREATE TABLE IF NOT EXISTS room_table (
-                        room_number INT AUTO_INCREMENT PRIMARY KEY,
-                        room_charges DECIMAL(10, 2),
-                        availability ENUM('Available', 'Booked') DEFAULT 'Available'
-                    )
-                ''')
-
-                connection.close()
-            except mysql.connector.Error as error:
-                print(f"Error creating room table: {error}")
-
-        def toggle_availability(self, room_number, current_status):
-            new_status = 'Booked' if current_status == 'Available' else 'Available'
-            try:
-                connection = mysql.connector.connect(
-                    host='localhost',
-                    user='root',
-                    password='root',
-                    database='HOTEL_MANAGEMENT'
-                )
-                cursor = connection.cursor()
-                update_query = "UPDATE room_table SET availability = %s WHERE room_number = %s"
-                cursor.execute(update_query, (new_status, room_number))
-                connection.commit()
-                connection.close()
-            except mysql.connector.Error as error:
-                print(f"Error toggling room availability: {error}")
-
-    def open_room_management(self):
-        # def toggle(room_number, current_status):
-        #     self.toggle_availability(room_number, current_status)
-        #     update_buttons()
-
-        # def update_buttons():
-        #     for btn, status in room_buttons:
-        #         btn.destroy()
-
-            try:
-                connection = mysql.connector.connect(
-                    host='localhost',
-                    user='root',
-                    password='root',
-                    database='HOTEL_MANAGEMENT'
-                )
-                cursor = connection.cursor()
-                cursor.execute("SELECT room_number, availability FROM room_table")
-                rooms = cursor.fetchall()
-
-            except mysql.connector.Error as error:
-                print(f"Error fetching room data: {error}")
-
-            root = tk.Tk()
-            root.title("Room Management")
-            root.geometry("800x600+0+0")
-
-            room_frame = tk.Frame(root,bd=10,relief="groove")
-            room_frame.pack()
-            
-
-            # room_buttons = update_buttons()
-
-            root.mainloop()
-
-# ============================</button3> ==============================
-            
+#             
 # ============================= <button2> =======================
 
     def open_show_check_inn_table(self):
@@ -130,7 +54,7 @@ class HotelManagementApp:
         button2 = tk.Button(left_frame, text="2. SHOW GUEST LIST", command=self.open_show_check_inn_table, width=50, height=5)
         button2.pack(padx=20, pady=5)
 
-        button3 = tk.Button(left_frame, text="3. CHECK OUT", command=self.open_room_management, width=50, height=5)
+        button3 = tk.Button(left_frame, text="3. CHECK OUT", command=room_status, width=50, height=5)
         button3.pack(padx=20, pady=5)
 
         button4 = tk.Button(left_frame, text="4. GET INFO OF ANY GUEST", command=search_by_number, width=50, height=5)
