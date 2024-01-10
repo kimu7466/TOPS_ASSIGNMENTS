@@ -16,8 +16,7 @@ class HotelManagementApp:
         self.root.geometry(f"{self.screen_width}x{self.screen_height}")
 
         self.create_main_interface()
-#############################################################################################
-#             
+##########################################################################
 # ============================= <button2> =======================
 
     def open_show_check_inn_table(self):

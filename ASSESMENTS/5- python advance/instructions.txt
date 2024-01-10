@@ -1,0 +1,27 @@
+Welcome to the HOTEL MANAGEMENT SYSTEM
+
+in this software you can manage your 
+1. guests private information 
+2. payment information
+3. room availability
+4. view data of any guests
+
+
+#SET_UP
+please install requrements.txt in your working environment.
+
+
+#EXECUTION
+1. First of all you have to run the file named create_rooms.py 
+
+
+    RUN this programe atleast once to create rooms data in your database.
+    this will add four rooms at once.
+    if you want to add more rooms. you can add more rooms but make sure to change room names in the query for identify individual. otherwise it will create rooms with the same name.
+
+    I'll add a option for that in my next update.
+    thank you
+
+
+2. Then you can freely run the main file named HOTEL_MANAGEMENT_SYSTEM.py
+

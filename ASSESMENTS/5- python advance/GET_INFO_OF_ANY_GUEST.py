@@ -51,7 +51,7 @@ def search_by_number():
     search_window = tk.Tk()
     search_window.title("Search by Number")
 
-    left_frame = tk.Frame(search_window)
+    left_frame = tk.Frame(search_window,bg="black")
     left_frame.pack(side=tk.LEFT, padx=10, pady=10)
 
     search_label = tk.Label(left_frame, text="Enter Number to Search:", font=("Arial", 18))
@@ -70,7 +70,7 @@ def search_by_number():
     right_frame.pack(side=tk.RIGHT, padx=10, pady=10)
 
     columns = ('ID', 'Name', 'Contact', 'Email', 'City', 'state')  
-    tree = ttk.Treeview(right_frame, columns=columns, show='headings')
+    tree = ttk.Treeview(scrolled_text, columns=columns, show='headings')
     tree.pack()
 
     for col in columns:

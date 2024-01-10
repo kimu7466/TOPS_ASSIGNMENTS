@@ -13,24 +13,6 @@ def show_check_inn_table(root):
                 tree_view.see(tree_view.get_children()[i])
                 break
 
-    def generate_receipt():
-        selected_item = tree_view.selection()
-        if selected_item:
-            selected_data = tree_view.item(selected_item)['values']
-            # Implement receipt generation with selected_data
-
-    def edit_data():
-        selected_item = tree_view.selection()
-        if selected_item:
-            selected_data = tree_view.item(selected_item)['values']
-            # Implement edit functionality for selected_data
-
-    def delete_data():
-        selected_item = tree_view.selection()
-        if selected_item:
-            selected_data = tree_view.item(selected_item)['values']
-            # Implement delete functionality for selected_data
-
     def fetch_check_inn_data():
         try:
             connection = mysql.connector.connect(
@@ -298,14 +280,14 @@ def show_check_inn_table(root):
     search_button = ttk.Button(frame, text="Search", command=search)
     search_button.pack(padx=10, pady=5)
 
-    tree_view = ttk.Treeview(frame, columns=("Name", "Address", "Number", "Duration", "RoomType", "PaymentMode"))
+    tree_view = ttk.Treeview(frame, columns=("ID","Name", "Address", "Number", "Duration", "RoomType", "PaymentMode"))
     tree_view.pack(padx=10, pady=10, fill=tk.BOTH, expand=True)
 
     tree_view.heading("#0", text="ID")
     tree_view.column("#0", width=50)
 
     tree_view["show"] = "headings"
-    for col in ("Name", "Address", "Number", "Duration", "RoomType", "PaymentMode"):
+    for col in ("ID","Name", "Address", "Number", "Duration", "RoomType", "PaymentMode"):
         tree_view.heading(col, text=col)
         tree_view.column(col, width=100)
 
@@ -322,15 +304,6 @@ def show_check_inn_table(root):
 
     check_inn_view_add_button = ttk.Button(root, text="CHECK INN", command= check_inn_window)
     check_inn_view_add_button.pack(padx=10, pady=5)
-
-    # receipt_button = ttk.Button(root, text="Generate Receipt", command=generate_receipt)
-    # receipt_button.pack(padx=10, pady=5)
-
-    # edit_button = ttk.Button(root, text="Edit", command=edit_data)
-    # edit_button.pack(padx=10, pady=5)
-
-    # delete_button = ttk.Button(root, text="Delete", command=delete_data)
-    # delete_button.pack(padx=10, pady=5)
 
 def main():
     root = tk.Tk()

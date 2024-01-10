@@ -1,3 +1,11 @@
+"""
+    RUN this programe atleast once to create rooms data in your database.
+    this will add four rooms at once.
+    if you want to add more rooms. you can add more rooms but make sure to change room names in the query for identify individual. otherwise it will create rooms with the same name.
+
+    I'll add a option for that in my next update.
+    thank you
+  """
 import tkinter as tk
 import mysql.connector
 
@@ -33,6 +41,13 @@ def room_status():
     # Create a table for rooms with an ID, room number, and availability column
     c.execute('''CREATE TABLE IF NOT EXISTS rooms 
                 (id INT AUTO_INCREMENT PRIMARY KEY, room_number VARCHAR(20), availability VARCHAR(20))''')
+
+    # Insert sample data
+    c.execute("INSERT INTO rooms (room_number, availability) VALUES ('DELUXE_2', 'Available')")
+    c.execute("INSERT INTO rooms (room_number, availability) VALUES ('GENERAL_2', 'Booked')")
+    c.execute("INSERT INTO rooms (room_number, availability) VALUES ('FULL DELUXE', 'Available')")
+    c.execute("INSERT INTO rooms (room_number, availability) VALUES ('JOINT', 'Available')")
+    # Add more sample data as needed
 
     conn.commit()
 
@@ -71,3 +86,4 @@ def room_status():
     conn.close()
 
 
+room_status()
