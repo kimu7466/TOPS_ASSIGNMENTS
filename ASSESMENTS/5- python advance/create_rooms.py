@@ -43,8 +43,8 @@ def room_status():
                 (id INT AUTO_INCREMENT PRIMARY KEY, room_number VARCHAR(20), availability VARCHAR(20))''')
 
     # Insert sample data
-    c.execute("INSERT INTO rooms (room_number, availability) VALUES ('DELUXE_2', 'Available')")
-    c.execute("INSERT INTO rooms (room_number, availability) VALUES ('GENERAL_2', 'Booked')")
+    c.execute("INSERT INTO rooms (room_number, availability) VALUES ('DELUXE', 'Available')")
+    c.execute("INSERT INTO rooms (room_number, availability) VALUES ('GENERAL', 'Booked')")
     c.execute("INSERT INTO rooms (room_number, availability) VALUES ('FULL DELUXE', 'Available')")
     c.execute("INSERT INTO rooms (room_number, availability) VALUES ('JOINT', 'Available')")
     # Add more sample data as needed
