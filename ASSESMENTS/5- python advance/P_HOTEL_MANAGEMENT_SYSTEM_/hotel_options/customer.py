@@ -144,7 +144,7 @@ class Cust_Win :
 
         # ============== Tabel frame search right ================
 
-        tabelframeright = LabelFrame(self.root,bd=2, relief=RIDGE ,text="View Details And Search System", font=("times new roman",12,"bold"))
+        tabelframeright = LabelFrame(self.root,bd=2, relief=RIDGE ,text="View Details And Search System", font=("times new roman",12,"bold"),bg="black")
         tabelframeright.place(x=435,y=50,width=860,height=490)
 
         searchby_lbl = Label(tabelframeright,text="Search By:", font=("arial",12,"bold"),bg="red",padx=2,pady=6)

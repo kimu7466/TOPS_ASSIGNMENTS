@@ -82,7 +82,9 @@ class Roombooking :
                     database = "hotel_management_cwk"
                 )
         my_cursor = conn.cursor()
-        my_cursor.execute(f"SELECT RoomNo FROM add_room WHERE RoomType = '{self.roomtype_var.get()}'")
+        query = "SELECT RoomNo FROM add_room WHERE RoomType = %s"
+        room_type = (self.roomtype_var.get(),)
+        my_cursor.execute(query, room_type)
         dbrows = my_cursor.fetchall()
 
         # room number combobox
@@ -142,7 +144,7 @@ class Roombooking :
 
         # ============== right side image ================
 
-        imgroomright = Image.open(r"C:\Users\kimu7\Desktop\CWk_HMS\images\image4.jpg")
+        imgroomright = Image.open(r"images\image4.jpg")
         imgroomright = imgroomright.resize((450, 200), resample=Image.LANCZOS)
         self.photoimgroomright = ImageTk.PhotoImage(imgroomright)
 
@@ -151,7 +153,7 @@ class Roombooking :
 
         # ============== Tabel frame search right ================
 
-        tabelframeright = LabelFrame(self.root,bd=2, relief=RIDGE ,text="View Details And Search System", font=("times new roman",12,"bold"))
+        tabelframeright = LabelFrame(self.root,bd=2, relief=RIDGE ,text="View Details And Search System", font=("times new roman",12,"bold"),bg="black")
         tabelframeright.place(x=435,y=280,width=860,height=260)
 
         searchby_lbl = Label(tabelframeright,text="Search By:", font=("arial",12,"bold"),bg="red",padx=2,pady=6)
@@ -188,8 +190,8 @@ class Roombooking :
         scroll_x.config(command=self.roomtable.xview)
         scroll_y.config(command=self.roomtable.yview)
 
-        dummy = ["contact","check_in","check_out","roomtype","room_number","no_of_days"]
-        text  = ["contact","check_in","check_out","roomtype","room_number","no_of_days"]
+        dummy = ["contact", "check_in", "check_out", "roomtype", "room_number", "no_of_days"]
+        text  = ["contact", "check_in", "check_out", "roomtype", "room_number", "no_of_days"]
 
         for i in range(len(dummy)):
             self.roomtable.heading(f"{i}", text=f"{text[i]}")

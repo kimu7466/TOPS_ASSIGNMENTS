@@ -3,6 +3,7 @@ from PIL import Image, ImageTk
 from .customer import Cust_Win
 from .room import Roombooking
 from .roomarrange import room_arrange
+from .contact_us import contact_info
 
 class hotelmanagementsystem:
     def __init__(self, root):
@@ -12,7 +13,7 @@ class hotelmanagementsystem:
 
         # ==============images ==================
 
-        img1 = Image.open(r"C:\Users\kimu7\Desktop\CWk_HMS\images\image1.jpg")
+        img1 = Image.open(r"images\image1.jpg")
         img1 = img1.resize((1540, 140), resample=Image.LANCZOS)
         self.photoimg1 = ImageTk.PhotoImage(img1)
 
@@ -37,19 +38,19 @@ class hotelmanagementsystem:
         # ============== button frame ==================
 
         button_frame = Frame(main_frame,bd=4,relief=RIDGE)
-        button_frame.place(x=0,y=35,width=228,height=190)
+        button_frame.place(x=0,y=35,width=228,height=420)
 
-        cust_btn = Button(button_frame,width= 22, text="CUSTOMER", command=self.cust_details, font=("times new roman", 14, "bold"),bg="black", fg="gold",bd=0,cursor="hand1")
+        cust_btn = Button(button_frame,height=4,width= 22, text="CUSTOMER", command=self.cust_details, font=("times new roman", 14, "bold"),bg="black", fg="gold",bd=0,cursor="hand1")
         cust_btn.grid(row=0,column=0, pady=1)
 
-        room_btn = Button(button_frame,width= 22,text="ROOM", command=self.Roombooking, font=("times new roman", 14, "bold"),bg="black", fg="gold",bd=0,cursor="hand1")
+        room_btn = Button(button_frame,height=4,width= 22,text="ROOM", command=self.Roombooking, font=("times new roman", 14, "bold"),bg="black", fg="gold",bd=0,cursor="hand1")
         room_btn.grid(row=1,column=0, pady=1)
 
-        add_room_btn = Button(button_frame,width= 22,text="ADD ROOM", command=self.room_arrange, font=("times new roman", 14, "bold"),bg="black", fg="gold",bd=0,cursor="hand1")
+        add_room_btn = Button(button_frame,height=4,width= 22,text="ADD ROOM", command=self.room_arrange, font=("times new roman", 14, "bold"),bg="black", fg="gold",bd=0,cursor="hand1")
         add_room_btn.grid(row=2,column=0, pady=1)
 
-        generate_receipt_btn = Button(button_frame,width= 22,text="GENERATE RECEIPT",font=("times new roman", 14, "bold"),bg="black", fg="gold",bd=0,cursor="hand1")
-        generate_receipt_btn.grid(row=3,column=0, pady=1)
+        contact_us_btn = Button(button_frame,height=4,width= 22,text="CONTACT US", command=self.contact_info, font=("times new roman", 14, "bold"),bg="black", fg="gold",bd=0,cursor="hand1")
+        contact_us_btn.grid(row=3,column=0, pady=1)
 
     def cust_details(self):
         self.new_window = Toplevel(self.root)
@@ -62,6 +63,10 @@ class hotelmanagementsystem:
     def room_arrange(self):
         self.new_window = Toplevel(self.root)
         self.app = room_arrange(self.new_window)
+
+    def contact_info(self):
+        self.new_window = Toplevel(self.root)
+        self.app = contact_info(self.new_window)
 
 if __name__ == '__main__':
     root = Tk()
