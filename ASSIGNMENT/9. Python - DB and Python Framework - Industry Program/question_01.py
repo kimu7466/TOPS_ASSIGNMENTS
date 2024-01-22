@@ -40,7 +40,7 @@ Now, let's go through the steps to create a Django project:
    
    cd projectname
    
-   
+   if you didn't made your project in your base directry.
 
 4. Run the Development Server:
    Start the development server using the following command:
@@ -52,4 +52,5 @@ Now, let's go through the steps to create a Django project:
    This will run the development server, and you can access your project by visiting http://127.0.0.1:8000/ in your web browser.
 
 Your Django project is now set up and running. You can start building your web applications within the project by creating Django apps, defining models, views, and templates. The manage.py script provides commands for various tasks, such as creating database tables, applying migrations, and more.
+
 '''
