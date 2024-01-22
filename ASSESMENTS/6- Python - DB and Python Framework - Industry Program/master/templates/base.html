@@ -29,20 +29,21 @@
         {% if request.session.role == "Doctor" %}
 
       <li><a href="{% url 'all_doctors_view' %}">View Other Doctors</a></li>
-      <li><a href="#">View Appointment</a></li>
+      <li><a href="{% url 'my_appointments' %}">View Appointments</a></li>
 
       {% endif %}
 
         {% if request.session.role == "Patient" %}
 
       <li><a href="{% url 'all_doctors_view' %}">View All Doctors</a></li>
-      <li><a href="#">Book Appointment</a></li>
+      <li><a href="{% url 'my_appointments' %}">View Appointment Status</a></li>
 
       {% endif %}
 
       <p></p>
       
-      <a>{{ request.session.role }} {{ request.session.firstname }} {{ request.session.lastname }}</a><br>
+      <a>{{ request.session.role }}</a><br>
+      <a>{{ request.session.title }} {{ request.session.firstname }} {{ request.session.lastname }}</a><br>
       <a>{{ request.session.email }}</a>
       <li><a href="{% url 'update_profile_view' %}">Update Profile</a></li>
       <p></p>

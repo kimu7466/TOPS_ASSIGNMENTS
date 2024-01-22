@@ -2,8 +2,8 @@ from django.db import models
 from .utils import generate_uniques
 from django.conf import settings
 from django.core.mail import send_mail
-
-
+import random
+import string
 
 class BaseClass(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
@@ -34,8 +34,10 @@ class Role(BaseClass):
 
 class Signed_up(BaseClass):
     role = models.ForeignKey(Role, on_delete=models.CASCADE)
+    title = models.CharField(max_length = 255, blank =True)
     firstname = models.CharField(max_length = 255)
     lastname = models.CharField(max_length = 255)
+    gender = models.CharField(max_length = 255,blank = True)
     degree = models.CharField(max_length=255, blank = True)
     email = models.EmailField(max_length = 255, unique=True)
     contact = models.CharField(max_length = 255)
@@ -53,8 +55,9 @@ class Signed_up(BaseClass):
         if not self.password:
             self.password = generate_uniques.generate_password()
 
-        if self.role.name == "Patient" and self.is_activated == True:
+        if self.role.name == "Patient" and self.is_activated == False :
             self.is_activated = True
+            print("is activated")
 
         if not self.credentials_sent:
             name = f"{self.firstname.upper()} {self.lastname.upper()}" 
@@ -70,8 +73,32 @@ class Signed_up(BaseClass):
 
         super(Signed_up, self).save(*args, **kwargs)
 
+class Appointment(BaseClass):
+    appointment_number = models.CharField(max_length=255,blank=True)
+    patient = models.CharField(max_length=255, blank=True)
+    patient_email = models.EmailField(max_length=255,blank=True)
+    patient_contact = models.CharField(max_length=255,blank=True)
+    doctor = models.CharField(max_length=255,blank=True)
+    doctor_email = models.EmailField(max_length=255,blank=True)
+    appointment_date = models.DateField(blank=True)
+    appointment_time = models.TimeField(blank=True)
+    additional_info = models.TextField(blank=True)
+    return_message = models.TextField(blank=True)
+    approval_status = models.BooleanField(default=False) 
 
+    def __str__(self):
+        return f"{self.appointment_number} : {self.patient} - {self.doctor} - {self.approval_status}"
+    
+    def save(self, *args, **kwargs):
+        if not self.appointment_number:
+            def generate_rest(digit=10):
+                APN = string.digits
+                number = ""
+                for n in range(digit):
+                    number += random.choice(APN)
+                return number    
+                
+            self.appointment_number += "APN00"+str(generate_rest()) 
 
-
-
+        super(Appointment, self).save(*args, **kwargs)
 

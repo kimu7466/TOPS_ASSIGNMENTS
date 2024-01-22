@@ -78,37 +78,58 @@ update profile
     <form action="{% url 'update_profile_view' %}" enctype="multipart/form-data" method="post">
         {% csrf_token %}
 
-        <label for="firstName">First Name:</label>
+        <label for="title">Title:</label>
         <br>
-        <input type="text" id="firstName" name="firstName" required placeholder="Jhon">
+        <select id="title" name="title" required>
+          <option value=""{% if request.session.gender == "" %} selected {% endif %}>select a role...</option>
+          <option value="Dr." {% if request.session.title == 'Dr.' %}selected{% endif %}>Dr.</option>
+          <option value="Mr." {% if request.session.title == 'Mr.' %}selected{% endif %}>Mr.</option>
+          <option value="Mrs." {% if request.session.title == 'Mrs.' %}selected{% endif %}>Mrs.</option>
+          <option value="Ms." {% if request.session.title == 'Ms.' %}selected{% endif %}>Ms.</option>
+        </select>
+        
+        <label for="firstname">First Name:</label>
         <br>
-        <label for="lastName">Last Name:</label>
+        <input type="text" id="firstname" name="firstname" required placeholder="Jhon" value="{{ request.session.firstname }}">
         <br>
-        <input type="text" id="lastName" name="lastName" required placeholder="smith">
+        <label for="lastname">Last Name:</label>
+        <br>
+        <input type="text" id="lastname" name="lastname" required placeholder="smith" value="{{ request.session.lastname }}">
+        <br>
+        <label for="gender">Gender:</label>
+        <br>
+        <select id="gender" name="gender" required>
+        <option value=""{% if request.session.gender == "" %} selected {% endif %}>select a Gender...</option>
+        <option value="Male"{% if request.session.gender == "Male" %} selected {% endif %}>Male</option>
+        <option value="Female" {% if request.session.gender == "Female" %} selected {% endif %}>Female</option>
+        <option value="Others"{% if request.session.gender == "Others" %} selected {% endif %}>Others</option>
+        </select>
+        {% if request.session.role == "Doctor" %}
         <br>
         <label for="degree">Degree:</label>
         <br>
-        <input type="degree" id="degree" name="degree" required placeholder="MBBS / MD / Pharm D / DDS etc.">
+        <input type="degree" id="degree" name="degree" required placeholder="MBBS / MD / Pharm D / DDS etc." value="{{ request.session.degree }}">
+        {% endif %}
         <br>
-        <label for="email">Email:</label>
-        <br>
-        <input type="email" id="email" name="email" required placeholder="example@xyz.com">
-        <br>
+        <!-- <label for="email">Email:</label>
+        <br> -->
+        <!-- <input type="email" id="email" name="email" required placeholder="example@xyz.com">
+        <br> -->
         <label for="contact">Contact:</label>
         <br>
-        <input type="text" id="contact" name="contact" required placeholder="9878XXXX45">
+        <input type="text" id="contact" name="contact" required placeholder="9878XXXX45" value="{{ request.session.contact }}">
         <br>
         <label for="address">Address:</label>
         <br>
         <textarea name="address"
         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        id="address" placeholder="Type your address here...">{{patient.address}}</textarea>
+        id="address" placeholder="Type your address here...">{{ request.session.address }}</textarea>
         
         <label for="summary">Summary:</label>
         <br>
         <textarea name="summary"
         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        id="summary" placeholder="Type your summary here...">{{patient.summary}}</textarea>
+        id="summary" placeholder="Type your summary here...">{{ request.session.summary }}</textarea>
         <br>
         <button type="submit">SAVE</button>
     </form>

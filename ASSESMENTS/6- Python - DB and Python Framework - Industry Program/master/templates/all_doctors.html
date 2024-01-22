@@ -38,9 +38,9 @@ all doctors
     {% if doctors %}
         {% for doctor in doctors %}
             <div class="doctor-card">
-                <h3>{{ doctor.firstname }} {{ doctor.lastname }}</h3>
-                <h4>Email: {{ doctor.email }}</h4>
-                <h4>Contact: {{ doctor.contact }}</h4>
+                <h3>{{ doctor.title }} {{ doctor.firstname }} {{ doctor.lastname }}</h3>
+                <h4>Degree: {{ doctor.degree }}</h4>
+                <h4>Summary: {{ doctor.summary }}</h4>
                 <a href="{% url 'doctor_detail_view' doctor_id=doctor.id %}" class="doctor-link">View Details</a>
             </div>
         {% endfor %}

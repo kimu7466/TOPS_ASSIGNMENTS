@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% block title %}
+    My Appointments
+{% endblock %}
+
+{% block body %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .container {
+            margin-left: 25%;
+            margin-right: 2%;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            background-color: #258de9;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 95%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+    </style>
+
+<div class="container">
+    <h2>{{ request.session.title }} {{ request.session.firstname }} {{ request.session.lastname }}</h2>
+    <h2>Your Appointments</h2>
+    
+    {% if request.session.role == "Doctor" %}
+    <table>
+        <thead>
+            <tr>
+                <th>Appointment Number</th>
+                <th>Patient</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Your Info</th>
+                <th>Doctor's message</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if appointments %}
+                {% for appointment in appointments %}
+                    <tr>
+                        <td>{{ appointment.appointment_number }}</td>
+                        <td>{{ appointment.patient }}</td>
+                        <td>{{ appointment.appointment_date }}</td>
+                        <td>{{ appointment.appointment_time }}</td>
+                        <td>{{ appointment.additional_info }}</td>
+                        <td>
+                            <textarea name="return_message" rows="3" cols="30">{{ appointment.return_message }}</textarea>
+                        </td>
+                        <td>{% if appointment.approval_status %}Approved{% else %}Pending{% endif %}</td>
+                        <td>
+                            <form method="post" action="{% url 'update_appointment_status' appointment.id %}">
+                                {% csrf_token %}
+                                <button type="submit" name="status" value="{% if appointment.approval_status %}pending{% else %}approve{% endif %}">
+                                    {% if appointment.approval_status %}Set Pending{% else %}Approve{% endif %}
+                                </button>
+                            </form>
+                            
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="8">No Appointments booked</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+    {% endif %}
+    
+    {% if request.session.role == "Patient" %}
+    <table>
+        <thead>
+            <tr>
+                <th>Appointment Number</th>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Your Info</th>
+                <th>Doctor's message</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if appointments %}
+                {% for appointment in appointments %}
+                    <tr>
+                        <td>{{ appointment.appointment_number }}</td>
+                        <td>{{ appointment.doctor }}</td>
+                        <td>{{ appointment.appointment_date }}</td>
+                        <td>{{ appointment.appointment_time }}</td>
+                        <td>{{ appointment.additional_info }}</td>
+                        <td>{{ appointment.return_message }}</td>
+                        <td>{% if appointment.approval_status %}Approved{% else %}Pending{% endif %}</td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="7">No Appointments booked</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+    {% endif %}
+</div>
+{% endblock %}
