@@ -3,8 +3,12 @@ from .models import *
 from django.contrib import messages
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Q
-
-
+from django.conf import settings
+from django.core.mail import send_mail
+from master.utils import generate_uniques
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_protect
+from django.http import HttpResponseRedirect
 
 
 def is_authenticated(view_func):
@@ -50,41 +54,166 @@ def login_view(request):
     if request.method == 'POST':
         email_ = request.POST['email']
         password_ = request.POST['password']
-        try:
-            get_active_accounts = Signed_up.objects.get(email=email_)
+        # print(email_)
+        # print(password_)
+        # get_role = Signed_up.objects.get(email = email_).role
+        # print(get_role)
 
+        get_active_accounts = Signed_up.objects.get(email=email_)
+
+        if get_active_accounts.role.name == "Doctor":
+            print("i am in")
+            try:
+                get_active_accounts = Signed_up.objects.get(email=email_)
+
+            except Signed_up.DoesNotExist:
+                messages.info(request, 'Invalid staff_id or password')
+                return redirect('login_view')
+            else:
+                print(get_active_accounts.is_activated_doctor)
+                if get_active_accounts.is_activated_doctor == True:
+                    if password_ == get_active_accounts.password:
+                        request.session['email'] = email_
+                        request.session['title'] = get_active_accounts.title
+                        request.session['id'] = get_active_accounts.id
+                        request.session['role'] = get_active_accounts.role.name
+                        request.session['firstname'] = get_active_accounts.firstname
+                        request.session['lastname'] = get_active_accounts.lastname
+                        request.session['gender'] = get_active_accounts.gender
+                        request.session['degree'] = get_active_accounts.degree
+                        request.session['contact'] = get_active_accounts.contact
+                        request.session['address'] = get_active_accounts.address
+                        request.session['summary'] = get_active_accounts.summary
+                        request.session['is_activated_doctor'] = get_active_accounts.is_activated_doctor
+
+                        if get_active_accounts.role.name == "Doctor":
+                            messages.success(request, f"hello!!! {get_active_accounts.title} {get_active_accounts.firstname} {get_active_accounts.lastname}... Now, you are logged in")
+                            return redirect('home_view')
+                        elif get_active_accounts.role.name == "Patient" :
+                            messages.success(request, f"hello!!! {get_active_accounts.title} {get_active_accounts.firstname} {get_active_accounts.lastname}... Now, you are logged in")
+                            return redirect('home_view')
+                    else:
+                        messages.info(request, 'Invalid staff_id or password')
+                        return redirect('login_view')
+                else:
+                    messages.info(request, 'Your account is deactivated. Please contact to Admin.')
+                    return redirect('login_view')
+
+        if get_active_accounts.role.name == "Patient":
+            print("i am in")
+            try:
+                get_active_accounts = Signed_up.objects.get(email=email_)
+
+            except Signed_up.DoesNotExist:
+                messages.info(request, 'Invalid staff_id or password')
+                return redirect('login_view')
+            else:
+                print(get_active_accounts.is_activated_patient)
+                if get_active_accounts.is_activated_patient == True:
+                    if password_ == get_active_accounts.password:
+                        request.session['email'] = email_
+                        request.session['title'] = get_active_accounts.title
+                        request.session['id'] = get_active_accounts.id
+                        request.session['role'] = get_active_accounts.role.name
+                        request.session['firstname'] = get_active_accounts.firstname
+                        request.session['lastname'] = get_active_accounts.lastname
+                        request.session['gender'] = get_active_accounts.gender
+                        request.session['degree'] = get_active_accounts.degree
+                        request.session['contact'] = get_active_accounts.contact
+                        request.session['address'] = get_active_accounts.address
+                        request.session['summary'] = get_active_accounts.summary
+                        request.session['is_activated_patient'] = get_active_accounts.is_activated_patient
+
+                        if get_active_accounts.role.name == "Doctor":
+                            messages.success(request, f"hello!!! {get_active_accounts.title} {get_active_accounts.firstname} {get_active_accounts.lastname}... Now, you are logged in")
+                            return redirect('home_view')
+                        elif get_active_accounts.role.name == "Patient" :
+                            messages.success(request, f"hello!!! {get_active_accounts.title} {get_active_accounts.firstname} {get_active_accounts.lastname}... Now, you are logged in")
+                            return redirect('home_view')
+                    else:
+                        messages.info(request, 'Invalid staff_id or password')
+                        return redirect('login_view')
+                else:
+                    messages.info(request, 'Your account is deactivated. Please contact to Admin.')
+                    return redirect('login_view')
+
+    return render(request, 'login.html')
+
+def forget_password_view(request):
+    if request.method == 'POST':
+        email_ = request.POST['email'].lower()  # Ensure case-insensitive email matching
+        try:
+            check_user = Signed_up.objects.get(email=email_)
         except Signed_up.DoesNotExist:
-            messages.info(request, 'Invalid staff_id or password')
+            messages.info(request, "User doesn't exist")
             return redirect('login_view')
         else:
-            if get_active_accounts.is_activated == True:
-                if password_ == get_active_accounts.password:
-                    request.session['email'] = email_
-                    request.session['title'] = get_active_accounts.title
-                    request.session['id'] = get_active_accounts.id
-                    request.session['role'] = get_active_accounts.role.name
-                    request.session['firstname'] = get_active_accounts.firstname
-                    request.session['lastname'] = get_active_accounts.lastname
-                    request.session['gender'] = get_active_accounts.gender
-                    request.session['degree'] = get_active_accounts.degree
-                    request.session['contact'] = get_active_accounts.contact
-                    request.session['address'] = get_active_accounts.address
-                    request.session['summary'] = get_active_accounts.summary
-                    request.session['is_activated'] = get_active_accounts.is_activated
+            if check_user:
+                otp_ = generate_uniques.generate_otp()
+                subject = "Authentication Code for [Forgot password]"
+                message = f"Code for [Password Change]: {otp_}"
+                from_email = settings.EMAIL_HOST_USER
+                recipient_list = [f"{email_}"]
+                send_mail(subject, message, from_email, recipient_list)
+                check_user.otp = otp_
+                check_user.save()
+                context = {'email': email_}
+                return render(request, 'otp_verification.html', context)
+    return render(request, 'forget_password.html')
 
-                    if get_active_accounts.role.name == "Doctor":
-                        messages.success(request, f"hello!!! Dr. {get_active_accounts.firstname} {get_active_accounts.lastname}... Now, you are logged in")
-                        return redirect('home_view')
-                    elif get_active_accounts.role.name == "Patient" :
-                        messages.success(request, f"hello!!! Mr. {get_active_accounts.firstname} {get_active_accounts.lastname}... Now, you are logged in")
-                        return redirect('home_view')
+def otp_verification_view(request):
+    if request.method == 'POST':
+        email_ = request.POST['email'].lower()
+        otp_ = request.POST['otp']
+        new_password_ = request.POST['new_password']
+        confirm_password_ = request.POST['confirm_password']
+        try:
+            check_user = Signed_up.objects.get(email=email_)
+        except Signed_up.DoesNotExist:
+            messages.info(request, "User doesn't exist")
+            return redirect('login_view')
+        else:
+            if check_user:
+                if check_user.otp == otp_:
+                    if new_password_ == confirm_password_:
+                        check_user.password = new_password_
+                        check_user.save()
+                        messages.success(request, "Password Changed Successfully")
+                        return redirect('login_view')
+                    else:
+                        messages.info(request, "New password and confirm password don't match")
+                        context = {'email': email_}
+                        return render(request, 'otp_verification.html', context)
                 else:
-                    messages.info(request, 'Invalid staff_id or password')
-                    return redirect('login_view')
-            else:
-                messages.info(request, 'Your account is deactivated. Please contact to Admin.')
-                return redirect('login_view')
-    return render(request, 'login.html')
+                    messages.error(request, "Invalid OTP!!!")
+                    context = {'email': email_}
+                    return render(request, 'otp_verification.html', context)
+
+    return render(request, 'otp_verification.html')
+
+@csrf_protect
+def resend_otp(request):
+    if request.method == 'GET':
+        email_ = request.GET.get('email')
+        if email_:
+            try:
+                check_user = Signed_up.objects.get(email=email_)
+            except Signed_up.DoesNotExist:
+                print("User doesn't exist")
+                return JsonResponse({'success': False, 'message': 'User does not exist'})
+
+            if check_user:
+                otp_ = generate_uniques.generate_otp()
+                subject = "Authentication Code for [Forgot password]"
+                message = f"Code for [Password Change]: {otp_}"
+                from_email = settings.EMAIL_HOST_USER
+                recipient_list = [f"{email_}"]
+                send_mail(subject, message, from_email, recipient_list)
+                check_user.otp = otp_
+                check_user.save()
+                return JsonResponse({'success': True, 'email': email_})
+
+    return JsonResponse({'success': False, 'message': 'Failed to resend OTP'})
 
 @is_authenticated
 def home_view(request):
@@ -183,6 +312,13 @@ def book_appointment_view(request, doctor_id):
 
     return render(request, 'book_appointment.html', {'doctor': doctor})
 
+@is_authenticated
+def delete_appointment(request, appointment_id):
+    appointment = Appointment.objects.get(id=appointment_id)
+    appointment.delete()    
+    return HttpResponseRedirect('/my_appointments/') 
+
+@is_authenticated
 def all_doctors_view(request):
     # Get the ID of the currently logged-in doctor
     logged_in_doctor_id = request.session.get('id')
@@ -203,20 +339,33 @@ def my_appointments(request):
         appointments = Appointment.objects.filter(doctor_email=user_email)
         return render(request, 'view_appointments.html', {'appointments': appointments})
 
-
 @is_authenticated
 def update_appointment_status(request, appointment_id):
     if request.method == 'POST':
         try:
             appointment = Appointment.objects.get(id=appointment_id)
-            appointment.approval_status = not appointment.approval_status
+
+            approval_status = request.POST.get('approval_status')
+            if approval_status == 'approve':
+                appointment.approval_status = True
+            elif approval_status == 'pending':
+                appointment.approval_status = False
+
+            return_message = request.POST.get('return_message')
+            appointment.return_message = return_message
+
+            # Saving the changes
             appointment.save()
-            return redirect('doctor_appointments')
-        except:
-            messages.error(request, "something went wrong try again")
+
+            # messages.success(request, "Appointment status and return message updated successfully.")
+            return redirect('my_appointments')
+        except Exception as e:
+            messages.error(request, f"Something went wrong: {str(e)}")
             return redirect('home_view')
     else:
         return redirect('home_view')
+
+
 
 def logout(request):
     request.session.clear()

@@ -99,6 +99,21 @@ all doctors
 
 <div class="container">
 
+    {% if messages %}
+    <div class="message-container">
+        {% for message in messages %}
+            <div class="message {% if message.tags == 'success' %} success{% elif message.tags == 'info' %} info{% elif message.tags == 'warning' %} warning{% elif message.tags == 'error' %} error{% endif %}" role="alert">
+                <div class="message-content">
+                    <p>{{ message }}</p>
+                </div>
+                <button class="close-button" onclick="this.parentElement.style.display='none'">&#x2716;</button>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+
 
 <h2>Book an Appointment</h2>
 
@@ -106,20 +121,20 @@ all doctors
     {% csrf_token %}
 
     <!-- Patient Information -->
-    <label for="patient_name">Your Name:</label>
-    <input type="text" id="patient_name" name="patient_name" required value="{{ request.session.title }} {{ request.session.firstname }} {{ request.session.lastname }}">
+    <!-- <label for="patient_name">Your Name:</label> -->
+    <input type="hidden" id="patient_name" name="patient_name" required value="{{ request.session.title }} {{ request.session.firstname }} {{ request.session.lastname }}">
 
-    <label for="patient_email">Your Email:</label>
-    <input type="email" id="patient_email" name="patient_email" required value="{{ request.session.email }}">
+    <!-- <label for="patient_email">Your Email:</label> -->
+    <input type="hidden" id="patient_email" name="patient_email" required value="{{ request.session.email }}">
 
-    <label for="patient_contact">Your Contact Number:</label>
-    <input type="tel" id="patient_contact" name="patient_contact" required value="{{ request.session.contact }}">
+    <!-- <label for="patient_contact">Your Contact Number:</label> -->
+    <input type="hidden" id="patient_contact" name="patient_contact" required value="{{ request.session.contact }}">
 
-    <label for="doctor_name">Doctor's Name:</label>
-    <input type="text" id="doctor_name" name="doctor_name" required value="{{ doctor.title }} {{ doctor.firstname }} {{ doctor.lastname }}">
+    <!-- <label for="doctor_name">Doctor's Name:</label> -->
+    <input type="hidden" id="doctor_name" name="doctor_name" required value="{{ doctor.title }} {{ doctor.firstname }} {{ doctor.lastname }}">
 
-    <label for="doctor_email">Doctor's Email:</label>
-    <input type="email" id="doctor_email" name="doctor_email" required value="{{ doctor.email }}">
+    <!-- <label for="doctor_email">Doctor's Email:</label> -->
+    <input type="hidden" id="doctor_email" name="doctor_email" required value="{{ doctor.email }}">
 
     <!-- Appointment Date and Time -->
     <label for="appointment_date">Select Appointment Date:</label>

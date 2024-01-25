@@ -57,6 +57,25 @@ home
       Welcome to Healthify, your all-in-one platform dedicated to enhancing your health and well-being. We believe that a healthy lifestyle is a journey, and we're here to support you every step of the way.
     </p>
   
+
+    {% if request.session.role == "Doctor" %}
+    <br>
+    <strong>User Instruction:</strong>
+        <p>Click on "View Other Doctors" in sidebar to see all other doctors associated with Healthify (excluding you).</p>
+        <p>Click on "View Appointments" in sidebar to view all appointments of your patients and update their status.</p>
+        <p>Click on "Save Button" in "View Appointments" to update a message and the Approval Status for the Patient.</p>
+    {% endif %}
+
+    {% if request.session.role == "Patient" %}
+    <br>
+    <strong>User Instruction:</strong>
+        <p>         Click on "View All Doctors" in sidebar to see all doctors associated with Healthify and book an appointment.</p>
+        <p>         Click on "View Details" in All Doctors page to see the details of that doctor.</p>
+        <p>         Click on "Book Appointments" in Doctor's Details page to book an appointment with that doctor.</p>
+        <p>         Click on "Veiw Appointments Status" in sidebar to see the status of your booked appointments.</p>
+        {% endif %}
+
+
     <h2>Key Features:</h2>
   
     <ul>
@@ -99,20 +118,6 @@ home
     <p>
       Embark on your health journey with Healthify today and take control of your well-being. Start living your healthiest, happiest life!
     </p>
-
-    {% if request.session.role == "Doctor" %}
-    <br><br>
-    <strong>User Instruction:</strong>
-        <p>Click on "View Other Doctors" in sidebar to see all other doctors associated with Healthify (excluding you).</p>
-        <p>Click on "View Appointments" in sidebar to view all appointments of your patients and update their status.</p>
-    {% endif %}
-
-    {% if request.session.role == "Patient" %}
-    <br><br>
-    <strong>User Instruction:</strong>
-        <p>         Click on "View All Doctors" in sidebar to see all doctors associated with Healthify and book an appointment.</p>
-        <p>         Click on "Booked Appointments" in sidebar to see the status of your booked appointments.</p>
-    {% endif %}
 </div>
 {% endblock %}
 

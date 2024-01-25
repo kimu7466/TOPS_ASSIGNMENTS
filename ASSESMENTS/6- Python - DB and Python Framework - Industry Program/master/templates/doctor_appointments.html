@@ -7,6 +7,22 @@
     <!-- Your existing styles and layout -->
 
     <div class="container">
+
+        {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                <div class="message {% if message.tags == 'success' %} success{% elif message.tags == 'info' %} info{% elif message.tags == 'warning' %} warning{% elif message.tags == 'error' %} error{% endif %}" role="alert">
+                    <div class="message-content">
+                        <p>{{ message }}</p>
+                    </div>
+                    <button class="close-button" onclick="this.parentElement.style.display='none'">&#x2716;</button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    
+    
+
         <h2>{{ request.user.get_full_name }} - Doctor</h2>
         <h2>Your Appointments</h2>
         <table>

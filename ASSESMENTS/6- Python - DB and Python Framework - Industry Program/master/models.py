@@ -43,10 +43,11 @@ class Signed_up(BaseClass):
     contact = models.CharField(max_length = 255)
     address = models.TextField(blank = True)
     summary = models.TextField(blank = True)
+    otp = models.CharField(max_length=10, default="658734", blank=True)
     password = models.CharField(max_length = 255, blank = True)
     credentials_sent = models.BooleanField(default = False)
-    is_activated = models.BooleanField(default = False)
-
+    is_activated_patient = models.BooleanField(default = True)
+    is_activated_doctor = models.BooleanField(default = False)
 
     def __str__(self):
         return f"{self.firstname} {self.lastname} - {self.role}"
@@ -54,10 +55,6 @@ class Signed_up(BaseClass):
     def save(self, *args, **kwargs):
         if not self.password:
             self.password = generate_uniques.generate_password()
-
-        if self.role.name == "Patient" and self.is_activated == False :
-            self.is_activated = True
-            print("is activated")
 
         if not self.credentials_sent:
             name = f"{self.firstname.upper()} {self.lastname.upper()}" 
@@ -91,14 +88,14 @@ class Appointment(BaseClass):
     
     def save(self, *args, **kwargs):
         if not self.appointment_number:
-            def generate_rest(digit=10):
+            def generate_rest_APN(digit=10):
                 APN = string.digits
                 number = ""
                 for n in range(digit):
                     number += random.choice(APN)
                 return number    
                 
-            self.appointment_number += "APN00"+str(generate_rest()) 
+            self.appointment_number += "APN00"+str(generate_rest_APN()) 
 
         super(Appointment, self).save(*args, **kwargs)
 

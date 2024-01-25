@@ -73,6 +73,19 @@ update profile
 
 <div class="container">
    
+    {% if messages %}
+    <div class="message-container">
+        {% for message in messages %}
+            <div class="message {% if message.tags == 'success' %} success{% elif message.tags == 'info' %} info{% elif message.tags == 'warning' %} warning{% elif message.tags == 'error' %} error{% endif %}" role="alert">
+                <div class="message-content">
+                    <p>{{ message }}</p>
+                </div>
+                <button class="close-button" onclick="this.parentElement.style.display='none'">&#x2716;</button>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
 
   
     <form action="{% url 'update_profile_view' %}" enctype="multipart/form-data" method="post">
@@ -104,12 +117,16 @@ update profile
         <option value="Female" {% if request.session.gender == "Female" %} selected {% endif %}>Female</option>
         <option value="Others"{% if request.session.gender == "Others" %} selected {% endif %}>Others</option>
         </select>
+
+
         {% if request.session.role == "Doctor" %}
         <br>
         <label for="degree">Degree:</label>
         <br>
         <input type="degree" id="degree" name="degree" required placeholder="MBBS / MD / Pharm D / DDS etc." value="{{ request.session.degree }}">
         {% endif %}
+
+        
         <br>
         <!-- <label for="email">Email:</label>
         <br> -->
@@ -125,11 +142,31 @@ update profile
         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         id="address" placeholder="Type your address here...">{{ request.session.address }}</textarea>
         
+
+        {% if request.session.role == "Doctor" %}
+
         <label for="summary">Summary:</label>
         <br>
         <textarea name="summary"
         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         id="summary" placeholder="Type your summary here...">{{ request.session.summary }}</textarea>
+       
+        {% endif %}
+
+       
+
+        {% if request.session.role == "Patient" %}
+<!-- 
+        <label for="summary">Summary:</label> -->
+        <br>
+        <textarea name="summary"
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="summary" hidden placeholder="Type your summary here...">{{ request.session.summary }}</textarea>
+       
+        {% endif %}
+
+       
+       
         <br>
         <button type="submit">SAVE</button>
     </form>

@@ -8,3 +8,11 @@ def generate_password(digit=8):
         password += random.choice(ch)
     return password
 
+
+def generate_otp(digit=6):
+    ch = string.digits
+    otp = ''
+    for i in range(digit):
+        otp += random.choice(ch)
+    return otp
+

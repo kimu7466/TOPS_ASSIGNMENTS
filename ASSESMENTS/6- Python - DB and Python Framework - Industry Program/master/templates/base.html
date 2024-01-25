@@ -26,7 +26,9 @@
   <div id="sidebar">
     <h2>Healthify</h2>
     <ul>
-        {% if request.session.role == "Doctor" %}
+      <li><a href="{% url 'home_view' %}">Home</a></li>
+      
+      {% if request.session.role == "Doctor" %}
 
       <li><a href="{% url 'all_doctors_view' %}">View Other Doctors</a></li>
       <li><a href="{% url 'my_appointments' %}">View Appointments</a></li>
