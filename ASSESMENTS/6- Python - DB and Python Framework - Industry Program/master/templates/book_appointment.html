@@ -1,60 +1,23 @@
 {% extends 'base.html' %}
 {% block title %}
-all doctors
+    Doctor Appointments
 {% endblock %}
 
 {% block body %}
+
+
 <style>
-    body {
-    font-family: Arial, sans-serif;
-    background-color: #10dac3;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-
-.content {
-    margin-left: 25%; 
-    margin-top: 5%; 
-    background-color: #5784e5;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 70%; 
+  .center-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vh; /* Adjust as needed for your layout */
+        margin: 0 auto;
+        max-width: 800px; /* Adjust as needed for your layout */
+        margin-top: 0px;
     }
 
-.doctor-card {
-    border: 1px solid #dddddd;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    padding: 15px;
-}
 
-</style>
-<style>
-    body {
-    font-family: Arial, sans-serif;
-    background-color: #10dac3;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    }
-
-    .container {
-    margin-left: 25%; 
-    margin-top: 5%; 
-    background-color: #5784e5;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 50%; 
-    }
-
-    h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    }
 
     label {
         display: block;
@@ -65,6 +28,7 @@ all doctors
     
     textarea{
             width: 100%;
+            max-width: 400px;
             height: 70px;
             padding: 10px;
             box-sizing: border-box;
@@ -77,6 +41,7 @@ all doctors
     input, select {
         width: 100%;
         padding: 10px;
+        max-width: 200px;
         margin-bottom: 16px;
         box-sizing: border-box;
         border: 1px solid #ccc;
@@ -97,7 +62,7 @@ all doctors
     }
 </style>
 
-<div class="container">
+<div class="center-content">
 
     {% if messages %}
     <div class="message-container">
@@ -114,13 +79,11 @@ all doctors
 
 
 
-
-<h2>Book an Appointment</h2>
-
 <form method="post" action="{% url 'book_appointment_view' doctor_id=doctor.id %}">
     {% csrf_token %}
 
-    <!-- Patient Information -->
+    <h2>Book an Appointment with {{ doctor.title }} {{ doctor.firstname }} {{ doctor.lastname }}</h2>
+
     <!-- <label for="patient_name">Your Name:</label> -->
     <input type="hidden" id="patient_name" name="patient_name" required value="{{ request.session.title }} {{ request.session.firstname }} {{ request.session.lastname }}">
 
@@ -136,18 +99,15 @@ all doctors
     <!-- <label for="doctor_email">Doctor's Email:</label> -->
     <input type="hidden" id="doctor_email" name="doctor_email" required value="{{ doctor.email }}">
 
-    <!-- Appointment Date and Time -->
     <label for="appointment_date">Select Appointment Date:</label>
     <input type="date" id="appointment_date" name="appointment_date" required>
 
     <label for="appointment_time">Select Appointment Time:</label>
     <input type="time" id="appointment_time" name="appointment_time" required>
 
-    <!-- Additional Information or Message -->
     <label for="additional_info">Additional Information or Message:</label>
     <textarea id="additional_info" name="additional_info" rows="4" cols="50"></textarea>
-
-    <!-- Submit Button -->
+<br>
     <button type="submit">Book Appointment</button>
 </form>
 </div>

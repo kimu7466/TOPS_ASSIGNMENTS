@@ -4,65 +4,96 @@ all doctors
 {% endblock %}
 
 {% block body %}
+
 <style>
-        body {
-        font-family: Arial, sans-serif;
-        background-color: #10dac3;
-        margin: 0;
-        padding: 0;
+   
+
+    .card-container {
         display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 420px;
+        margin: 20px;
+        text-align: center;
+        font-family: arial;
+        max-height: 6000px;
+        border-radius: 5%;
+        border-style: groove;
+    }
+
+    .title {
+        color: grey;
+        font-size: 18px;
+    }
+
+    button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 22px;
+        color: black;
+    }
+
+    button:hover,
+    a:hover {
+        opacity: 0.7;
     }
 
     
-    .content {
-        margin-left: 25%; 
-        margin-top: 5%; 
-        background-color: #5784e5;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 70%; 
-        }
-
-    .doctor-card {
-        border: 1px solid #dddddd;
-        border-radius: 8px;
-        margin-bottom: 15px;
-        padding: 15px;
-    }
-
 </style>
-<div class="content">
+
+<body2>
+
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
-            <div class="message {% if message.tags == 'success' %} success{% elif message.tags == 'info' %} info{% elif message.tags == 'warning' %} warning{% elif message.tags == 'error' %} error{% endif %}" role="alert">
-                <div class="message-content">
-                    <p>{{ message }}</p>
-                </div>
-                <button class="close-button" onclick="this.parentElement.style.display='none'">&#x2716;</button>
+        <div class="message {% if message.tags == 'success' %} success{% elif message.tags == 'info' %} info{% elif message.tags == 'warning' %} warning{% elif message.tags == 'error' %} error{% endif %}" role="alert">
+            <div class="message-content">
+                <p>{{ message }}</p>
             </div>
+            <button class="close-button" onclick="this.parentElement.style.display='none'">&#x2716;</button>
+        </div>
         {% endfor %}
     </div>
-{% endif %}
-
-
-
-    <h1>All Doctors</h1>
-
-    {% if doctors %}
-        {% for doctor in doctors %}
-            <div class="doctor-card">
-                <h3>{{ doctor.title }} {{ doctor.firstname }} {{ doctor.lastname }}</h3>
-                <h4>Degree: {{ doctor.degree }}</h4>
-                <h4>Summary: {{ doctor.summary }}</h4>
-                <a href="{% url 'doctor_detail_view' doctor_id=doctor.id %}" class="doctor-link">View Details</a>
-            </div>
-        {% endfor %}
-    {% else %}
-        <p>No doctors available.</p>
     {% endif %}
 
+    <div class="card-container">
+        {% if doctors %}
+        {% for doctor in doctors %}
+        
+        <div class="card">
+            <h2 style="text-align:center">{{ doctor.title }} {{ doctor.firstname }} {{ doctor.lastname }}</h2>
+            <p class="title">{{ doctor.degree }}</p>
+            <h3>Summary: {{ doctor.summary }}</h3>
+            <div style="margin: 24px 0;">
+
+            </div>
+            <div>
+                <p><a href="{% url 'doctor_detail_view' doctor_id=doctor.id %}"><button>View Details</button></a></p>
+            </div>
+        </div>
+
+        {% endfor %}
+        {% else %}
+        <p>No doctors available.</p>
+        {% endif %}
+    </div>
+
     <p><a href="{% url 'home_view' %}">Back to Home</a></p>
-</div>
+</body2>
 {% endblock %}

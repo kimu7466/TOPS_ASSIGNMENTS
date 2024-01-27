@@ -59,83 +59,91 @@ def login_view(request):
         # get_role = Signed_up.objects.get(email = email_).role
         # print(get_role)
 
-        get_active_accounts = Signed_up.objects.get(email=email_)
+        try:
+            get_active_accounts = Signed_up.objects.get(email=email_)
 
-        if get_active_accounts.role.name == "Doctor":
-            print("i am in")
-            try:
-                get_active_accounts = Signed_up.objects.get(email=email_)
+            if get_active_accounts.role.name == "Doctor":
+                print("i am in")
+                try:
+                    get_active_accounts = Signed_up.objects.get(email=email_)
 
-            except Signed_up.DoesNotExist:
-                messages.info(request, 'Invalid staff_id or password')
-                return redirect('login_view')
-            else:
-                print(get_active_accounts.is_activated_doctor)
-                if get_active_accounts.is_activated_doctor == True:
-                    if password_ == get_active_accounts.password:
-                        request.session['email'] = email_
-                        request.session['title'] = get_active_accounts.title
-                        request.session['id'] = get_active_accounts.id
-                        request.session['role'] = get_active_accounts.role.name
-                        request.session['firstname'] = get_active_accounts.firstname
-                        request.session['lastname'] = get_active_accounts.lastname
-                        request.session['gender'] = get_active_accounts.gender
-                        request.session['degree'] = get_active_accounts.degree
-                        request.session['contact'] = get_active_accounts.contact
-                        request.session['address'] = get_active_accounts.address
-                        request.session['summary'] = get_active_accounts.summary
-                        request.session['is_activated_doctor'] = get_active_accounts.is_activated_doctor
-
-                        if get_active_accounts.role.name == "Doctor":
-                            messages.success(request, f"hello!!! {get_active_accounts.title} {get_active_accounts.firstname} {get_active_accounts.lastname}... Now, you are logged in")
-                            return redirect('home_view')
-                        elif get_active_accounts.role.name == "Patient" :
-                            messages.success(request, f"hello!!! {get_active_accounts.title} {get_active_accounts.firstname} {get_active_accounts.lastname}... Now, you are logged in")
-                            return redirect('home_view')
-                    else:
-                        messages.info(request, 'Invalid staff_id or password')
-                        return redirect('login_view')
-                else:
-                    messages.info(request, 'Your account is deactivated. Please contact to Admin.')
+                except Signed_up.DoesNotExist:
+                    messages.info(request, 'Invalid staff_id or password')
                     return redirect('login_view')
-
-        if get_active_accounts.role.name == "Patient":
-            print("i am in")
-            try:
-                get_active_accounts = Signed_up.objects.get(email=email_)
-
-            except Signed_up.DoesNotExist:
-                messages.info(request, 'Invalid staff_id or password')
-                return redirect('login_view')
-            else:
-                print(get_active_accounts.is_activated_patient)
-                if get_active_accounts.is_activated_patient == True:
-                    if password_ == get_active_accounts.password:
-                        request.session['email'] = email_
-                        request.session['title'] = get_active_accounts.title
-                        request.session['id'] = get_active_accounts.id
-                        request.session['role'] = get_active_accounts.role.name
-                        request.session['firstname'] = get_active_accounts.firstname
-                        request.session['lastname'] = get_active_accounts.lastname
-                        request.session['gender'] = get_active_accounts.gender
-                        request.session['degree'] = get_active_accounts.degree
-                        request.session['contact'] = get_active_accounts.contact
-                        request.session['address'] = get_active_accounts.address
-                        request.session['summary'] = get_active_accounts.summary
-                        request.session['is_activated_patient'] = get_active_accounts.is_activated_patient
-
-                        if get_active_accounts.role.name == "Doctor":
-                            messages.success(request, f"hello!!! {get_active_accounts.title} {get_active_accounts.firstname} {get_active_accounts.lastname}... Now, you are logged in")
-                            return redirect('home_view')
-                        elif get_active_accounts.role.name == "Patient" :
-                            messages.success(request, f"hello!!! {get_active_accounts.title} {get_active_accounts.firstname} {get_active_accounts.lastname}... Now, you are logged in")
-                            return redirect('home_view')
-                    else:
-                        messages.info(request, 'Invalid staff_id or password')
-                        return redirect('login_view')
                 else:
-                    messages.info(request, 'Your account is deactivated. Please contact to Admin.')
+                    print(get_active_accounts.is_activated_doctor)
+                    if get_active_accounts.is_activated_doctor == True:
+                        if password_ == get_active_accounts.password:
+                            request.session['email'] = email_
+                            request.session['title'] = get_active_accounts.title
+                            request.session['id'] = get_active_accounts.id
+                            request.session['role'] = get_active_accounts.role.name
+                            request.session['firstname'] = get_active_accounts.firstname
+                            request.session['lastname'] = get_active_accounts.lastname
+                            request.session['gender'] = get_active_accounts.gender
+                            request.session['degree'] = get_active_accounts.degree
+                            request.session['contact'] = get_active_accounts.contact
+                            request.session['address'] = get_active_accounts.address
+                            request.session['summary'] = get_active_accounts.summary
+                            request.session['is_activated_doctor'] = get_active_accounts.is_activated_doctor
+
+                            if get_active_accounts.role.name == "Doctor":
+                                messages.success(request, f"hello!!! {get_active_accounts.title} {get_active_accounts.firstname} {get_active_accounts.lastname}... Now, you are logged in")
+                                return redirect('home_view')
+                            elif get_active_accounts.role.name == "Patient" :
+                                messages.success(request, f"hello!!! {get_active_accounts.title} {get_active_accounts.firstname} {get_active_accounts.lastname}... Now, you are logged in")
+                                return redirect('home_view')
+                        else:
+                            messages.info(request, 'Invalid staff_id or password')
+                            return redirect('login_view')
+                    else:
+                        messages.info(request, 'Your account is deactivated. Please contact to Admin.')
+                        return redirect('login_view')
+
+            if get_active_accounts.role.name == "Patient":
+                print("i am in")
+                try:
+                    get_active_accounts = Signed_up.objects.get(email=email_)
+
+                except Signed_up.DoesNotExist:
+                    messages.info(request, 'Invalid staff_id or password')
                     return redirect('login_view')
+                else:
+                    print(get_active_accounts.is_activated_patient)
+                    if get_active_accounts.is_activated_patient == True:
+                        if password_ == get_active_accounts.password:
+                            request.session['email'] = email_
+                            request.session['title'] = get_active_accounts.title
+                            request.session['id'] = get_active_accounts.id
+                            request.session['role'] = get_active_accounts.role.name
+                            request.session['firstname'] = get_active_accounts.firstname
+                            request.session['lastname'] = get_active_accounts.lastname
+                            request.session['gender'] = get_active_accounts.gender
+                            request.session['degree'] = get_active_accounts.degree
+                            request.session['contact'] = get_active_accounts.contact
+                            request.session['address'] = get_active_accounts.address
+                            request.session['summary'] = get_active_accounts.summary
+                            request.session['is_activated_patient'] = get_active_accounts.is_activated_patient
+
+                            if get_active_accounts.role.name == "Doctor":
+                                messages.success(request, f"hello!!! {get_active_accounts.title} {get_active_accounts.firstname} {get_active_accounts.lastname}... Now, you are logged in")
+                                return redirect('home_view')
+                            elif get_active_accounts.role.name == "Patient" :
+                                messages.success(request, f"hello!!! {get_active_accounts.title} {get_active_accounts.firstname} {get_active_accounts.lastname}... Now, you are logged in")
+                                return redirect('home_view')
+                        else:
+                            messages.info(request, 'Invalid staff_id or password')
+                            return redirect('login_view')
+                    else:
+                        messages.info(request, 'Your account is deactivated. Please contact to Admin.')
+                        return redirect('login_view')
+
+        except Signed_up.DoesNotExist:
+            messages.info(request, 'Invalid staff_id or password')
+            return redirect('login_view')
+
+
+
 
     return render(request, 'login.html')
 
@@ -154,7 +162,12 @@ def forget_password_view(request):
                 message = f"Code for [Password Change]: {otp_}"
                 from_email = settings.EMAIL_HOST_USER
                 recipient_list = [f"{email_}"]
-                send_mail(subject, message, from_email, recipient_list)
+                try:    
+                    send_mail(subject, message, from_email, recipient_list)
+                except:
+                    messages.error(request, "Please check your network connection")
+                    return redirect('login_view')
+
                 check_user.otp = otp_
                 check_user.save()
                 context = {'email': email_}
