@@ -1,0 +1,205 @@
+<!-- 
+    due questions to ask mem to ask mem:-
+    1. red star mark on required lables.
+    :- span tag with class
+
+    2. center the div without margin.
+    3. button vs input submit styling issues then.
+    4. best practice for text alignment and text size and responsive text like vh and pixels are messy and setting width by % vs pixels.
+    5. made a reset button by input type reset works by default  but button with id require a script to work
+        will it work for the submit.
+    6. select and input shows different sizes at same values
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            color: rgb(163, 38, 38);
+            text-align: center;
+            background-image: linear-gradient(#a0e6f6,#43ddff, #21d6ff , #017691 );
+            padding: 1%;
+        }    
+        .tag{
+            color: red;
+            text-align: left;
+        }
+        .my_form{
+            background-color: #74e6ff;
+            padding-right: 5%;
+            padding-top: 1%;
+            padding-bottom: 2%;
+            padding-left: 4%;
+            font-size: 26px;
+            font-weight: 600;
+            text-align: right;
+        }
+        .input{
+            text-align: left;
+            height: 26px;
+            font-size: 26px;
+        }
+        select{
+            margin-left: 15px;
+            height: 30px;
+            width: 90%;
+        }
+        input{
+            margin-left: 15px;
+            height: 26px;
+            width: 90%;
+            border-color:   #00bfff;
+            font-size: x-large;
+        }
+        p{
+            margin: 0;
+        }
+        .p2{
+            margin-top: 30px;
+        }
+        button{
+            color: #ffffff;
+            background-color: #017691;
+            font-size: large;
+            font-weight: 600;
+            padding: 10px;
+            border-radius: 5px;
+            border-color: #017691;
+            margin-top: 40px;
+        }
+        td{
+            width: 22%;
+        }
+        .content{
+            margin-left: 9%;
+            width: 80%;
+        }
+        .necessory{
+            color: red;
+        }
+    </style>
+</head>
+
+
+<body class="content">
+    
+        <h1>Individual Registration</h1>
+        <form  class="my_form" id="myForm" action="#">
+            
+            <div>
+
+                    <table cellspacing="0">
+            
+                    <tr>
+                        <td  class="tag" colspan="4"><p class="p2">User Particulars</p></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"><span class="necessory">*</span> Login ID</td>
+                        <td class="input"><input type="text"></td>
+                    </tr>
+                
+                    <tr>
+                        <td colspan="2"><span class="necessory">*</span> Password</td>
+                        <td class="input"><input type="text"></td>
+                    </tr>
+            
+                    <tr>
+                        <td colspan="2"><span class="necessory">*</span> Confirm Password</td>
+                        <td class="input"><input type="text"></td>
+                    </tr>
+
+                    <tr>
+                        <td  class="tag" colspan="4"><p class="p2">Personal Particulars</p></td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="necessory">*</span> Salutation</td>
+                        <td class="input"><select name="" id=""></select></td>
+                        <td><span class="necessory">*</span> First Name</td>
+                        <td class="input"><input type="text"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Middle Name</td>
+                        <td class="input"><input type="text"></td>
+                        <td><span class="necessory">*</span> Last Name</td>
+                        <td class="input"><input type="text"></td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="necessory">*</span> Resident Status</td>
+                        <td class="input"><select name="" id=""></select></td>
+                        <td><span class="necessory">*</span> Country</td>
+                        <td class="input"><select name="" id=""></select></td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="necessory">*</span> Email-Id</td>
+                        <td class="input"><input type="text"></td>
+                        <td><span class="necessory">*</span> Mobile Number</td>
+                        <td class="input"><input type="text"></td>
+                    </tr>
+
+                    <tr>
+                        <td  class="tag" colspan="4"><p class="p2">Account Particulars</p></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><span class="necessory">*</span> 15 Digit Account No</td>
+                        <td class="input"><input type="text"></td>
+                        <td><span class="necessory">*</span> Nick Name</td>
+                        <td class="input"><input type="text"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><span class="necessory">*</span> Fund Transfer</td>
+                        <td class="input"><select name="" id=""></select></td>
+                    </tr>
+                    
+                    <tr>
+                        <td  class="tag" colspan="4"><p class="p2">DECLARATION</p></td>
+                    </tr>
+
+                    <tr>
+                        <td style="text-align: justify;" colspan="4"><p>I have read, understood and hereby agree to the Terms and Conditions in respect of all products and channels. 
+                        </p>
+                        <p>I understand that any changes in the terms and conditions applicable to this relationship would be made available to me on request at any IOB branches. I confirm that all accounts under this login name are operated singly and in case of joint account operated by either or survivor/anyone or survivor (s) under his/her joint name respectively. I do hereby declare that information furnished in this form is true to the best of my knowledge and belief.
+                        </p>
+                        </td>
+                    </tr>
+                    
+                <tr>
+                    <td></td>
+                    <td style="text-align: right;" class="button"> <button>submit</button></td>
+                    <td style="text-align: left;" class="button"> <button  type="button" onclick="resetForm()">reset</button></td>
+                </tr>
+
+
+                    <!-- <tr>
+                    <td></td>
+                    <td class="button" style="text-align: right;"><input type="submit"></td>
+                    <td class="button" style="text-align: left;"><input type="reset"></td>
+                    <td></td>
+                    </tr> -->
+                </table>
+        </form>
+    
+        
+<script>
+    function resetForm() {
+        document.getElementById("myForm").reset();
+    }
+</script>   
+
+</body>
+
+</html>
