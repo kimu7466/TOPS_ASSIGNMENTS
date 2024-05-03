@@ -1,0 +1,15 @@
+Q.2 How many type of Variable in JavaScript? 
+
+
+ans:
+
+In JavaScript, there are three main types of variables:
+
+1. var: This was the original way to declare variables in JavaScript. Variables declared with "var" have function scope, meaning they are scoped to the function in which they are declared, or globally scoped if declared outside of any function. However, "var" has some issues related to variable hoisting and lack of block scope, which can lead to unexpected behavior in certain situations.
+
+2. let: Introduced in ECMAScript 6 (ES6), "let" allows you to declare variables that are block-scoped, meaning they are only accessible within the block (pair of curly braces) where they are defined, including loops and conditionals. Variables declared with "let" can be reassigned, but they cannot be re-declared within the same block.
+
+3. const: Also introduced in ECMAScript 6 (ES6), "const" is used to declare variables that are block-scoped like "let", but with the added restriction that their value cannot be reassigned after initialization. However, it's important to note that "const" does not make variables immutable; it just prevents reassignment of the variable itself. If the variable holds an object or array, its properties or elements can still be modified.
+
+Using "let" and "const" is generally preferred over "var" because they provide better scoping and help prevent certain types of bugs.
+

@@ -1,0 +1,34 @@
+Q.3 Define a Data Types in js?
+
+ans:
+
+JavaScript has several built-in data types, which can be broadly categorized into two main categories: primitive data types and reference data types.
+
+1. Primitive Data Types:
+   - Number: Represents numeric values, including integers and floating-point numbers.
+    For example: `5`, `3.14`.
+
+   - String: Represents textual data enclosed within single or double quotes.
+    For example: `"Hello"`, `'JavaScript'`.
+
+   - Boolean: Represents a logical value indicating `true` or `false`.
+
+   - Undefined: Represents a variable that has been declared but not assigned a value. Variables are automatically assigned the value `undefined` when declared without initialization.
+
+   - Null: Represents the absence of a value. It is often used to explicitly indicate that a variable has no value.
+
+   - Symbol: Introduced in ECMAScript 6 (ES6), symbols are unique and immutable data types, often used as property keys in objects.
+
+
+2. Reference Data Types:
+   - Object: Represents a collection of key-value pairs, where keys are strings (or symbols) and values can be any data type, including other objects. Objects are used to store complex data structures and are the foundation of JavaScript's object-oriented programming paradigm.
+
+   - Array: Represents a ordered list of elements, each identified by an index. Arrays can contain elements of any data type, including other arrays or objects.
+
+   - Function: Represents a reusable block of code that performs a specific task. Functions are a fundamental building block of JavaScript, enabling code modularity and reusability.
+
+   - Date: Represents a specific moment in time, typically used for working with dates and times.
+
+   - RegExp (Regular Expression): Represents a pattern used for matching strings in text.
+
+These data types provide the foundation for storing and manipulating data in JavaScript programs. Each data type has its own set of properties and methods that can be used to perform various operations.
