@@ -1,7 +1,7 @@
 import mysql.connector
 
 def create_database():
-    print("func test")
+    # print("func test")
     con = mysql.connector.connect(
         host="localhost",
         user="root",
