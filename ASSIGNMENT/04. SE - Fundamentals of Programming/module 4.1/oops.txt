@@ -1,0 +1,36 @@
+OOP stands for Object-Oriented Programming. It is a programming paradigm or methodology that uses objects and classes for organizing and structuring code. In OOP, the focus is on modeling real-world entities and their interactions in a software application. OOP concepts provide a way to design and build software in a more modular, maintainable, and extensible manner. Here are some key OOP concepts:
+
+1. Classes and Objects: 
+   - Class: A class is a blueprint or template for creating objects. It defines the properties (attributes) and behaviors (methods) that its objects will have.
+   - Object: An object is an instance of a class. It represents a real-world entity and encapsulates both data (attributes) and behaviors (methods).
+
+2. Encapsulation:
+   - Encapsulation is the concept of bundling data (attributes) and the methods (functions) that operate on that data into a single unit, i.e., the class. It helps in data hiding and protecting the internal state of objects.
+
+3. Inheritance:
+   - Inheritance allows a class (subclass or derived class) to inherit properties and behaviors from another class (base class or superclass). It promotes code reuse and hierarchy among classes.
+
+4. Polymorphism:
+   - Polymorphism allows objects of different classes to be treated as objects of a common superclass. It enables method overriding, where a subclass can provide a specific implementation of a method defined in its superclass.
+
+5. Abstraction:
+   - Abstraction is the process of simplifying complex reality by modeling classes based on the essential properties and behaviors while hiding unnecessary details. It helps in managing complexity.
+
+6. Method Overloading and Method Overriding:
+   - Method Overloading: It is the ability to define multiple methods with the same name in a class but with different parameter lists. The correct method to be called is determined at compile-time based on the arguments provided.
+   - Method Overriding: It allows a subclass to provide a specific implementation of a method that is already defined in its superclass. This is achieved using inheritance and allows for runtime polymorphism.
+
+7. Constructor and Destructor:
+   - Constructor: Constructors are special methods used to initialize objects when they are created. They have the same name as the class and can have parameters to initialize object properties.
+   - Destructor: Destructors are used to clean up resources or perform final tasks before an object is destroyed.
+
+8. Composition:
+   - Composition is a concept where a class can be composed of one or more objects of other classes as part of its attributes. It allows for building complex objects by combining simpler ones.
+
+9. Association, Aggregation, and Composition:
+   - These are relationships between classes:
+     - Association: A relationship between two classes where one class is connected to another, but they are not part of each other.
+     - Aggregation: A "has-a" relationship where one class contains or is composed of other classes but can exist independently.
+     - Composition: A stronger form of aggregation where the lifetime of the contained object is tied to the container.
+
+These OOP concepts help developers design software in a way that is modular, maintainable, and extensible, promoting code reusability and making it easier to model real-world systems in software.
