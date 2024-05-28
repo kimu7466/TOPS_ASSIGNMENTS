@@ -1,4 +1,0 @@
-2. What are tags and attributes in HTML? 
-
-answer :- 
-

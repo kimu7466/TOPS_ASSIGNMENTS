@@ -1,9 +1,10 @@
 #include <iostream>
 #include <string>
+using namespace std;
 
 class BankAccount {
 public:
-    BankAccount(const std::string& name, long accountNumber, const std::string& accountType, double balance) {
+    BankAccount(const string& name, long accountNumber, const string& accountType, double balance) {
         depositorName = name;
         accountNum = accountNumber;
         accountTypeStr = accountType;
@@ -13,33 +14,33 @@ public:
     void deposit(double amount) {
         if (amount > 0) {
             accountBalance += amount;
-            std::cout << "Deposit of $" << amount << " successful." << std::endl;
+            cout << "Deposit of $" << amount << " successful." << endl;
         } else {
-            std::cout << "Invalid deposit amount." << std::endl;
+            cout << "Invalid deposit amount." << endl;
         }
     }
 
     void withdraw(double amount) {
         if (amount > 0 && amount <= accountBalance) {
             accountBalance -= amount;
-            std::cout << "Withdrawal of $" << amount << " successful." << std::endl;
+            cout << "Withdrawal of $" << amount << " successful." << endl;
         } else {
-            std::cout << "Invalid withdrawal amount or insufficient balance." << std::endl;
+            cout << "Invalid withdrawal amount or insufficient balance." << endl;
         }
     }
 
     void displayInfo() {
-        std::cout << "Account Information" << std::endl;
-        std::cout << "Depositor Name: " << depositorName << std::endl;
-        std::cout << "Account Number: " << accountNum << std::endl;
-        std::cout << "Account Type: " << accountTypeStr << std::endl;
-        std::cout << "Account Balance: $" << accountBalance << std::endl;
+        cout << "Account Information" << endl;
+        cout << "Depositor Name: " << depositorName << endl;
+        cout << "Account Number: " << accountNum << endl;
+        cout << "Account Type: " << accountTypeStr << endl;
+        cout << "Account Balance: $" << accountBalance << endl;
     }
 
 private:
-    std::string depositorName;
+    string depositorName;
     long accountNum;
-    std::string accountTypeStr;
+    string accountTypeStr;
     double accountBalance;
 };
 
