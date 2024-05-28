@@ -9,6 +9,5 @@ def calculate_factorial(n):
     else:
         return math.factorial(n)
 
-# Example usage:
 number = int(input("Enter a number: "))
 print("Factorial of", number, "is:", calculate_factorial(number))

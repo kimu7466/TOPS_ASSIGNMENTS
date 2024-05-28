@@ -19,16 +19,13 @@ instance_name = class_name([paras])
 '''
 
 class demo:
-    # data member
     name = input("Enter a name: ")
     age = int(input("Enter an age: "))
 
 
-    # member function
     def student(self):
         print("I am a student")
 
-# create object
 s = demo()
 print(s.name)
 print(s.age)

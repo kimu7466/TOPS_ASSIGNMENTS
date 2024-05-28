@@ -1,7 +1,11 @@
 Module – 4 (Advance python programming)
+
 Q.1. What is File function in python? What is keywords to create and write file.
+
 Q.2. Write a Python program to read an entire text file.
+
 Q.3. Write a Python program to append text to a file and display the text.
+
 Q.4. Write a Python program to read first n lines of a file.
 
 Q.5. Write a Python program to read last n lines of a file.

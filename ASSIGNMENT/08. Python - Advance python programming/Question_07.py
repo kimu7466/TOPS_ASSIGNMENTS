@@ -4,13 +4,13 @@ file = open('output.txt', 'r')
 str_content = ""
 
 for i in range(0,1000 ):
-    char = file.read(1)  # Read one character at a time
+    char = file.read(1)  
     if char:
-        str_content += char  # Append the character to the string
+        str_content += char  
 
 print(str_content)
 
-file.close()  # Remember to close the file when done
+file.close()  
  
 
  

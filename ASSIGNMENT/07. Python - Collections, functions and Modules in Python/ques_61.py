@@ -3,22 +3,17 @@
 # import math
 
 # def sum_of_divisors(number):
-#     # Initialize the sum
 #     divisor_sum = 0
 
-#     # Iterate up to the square root of the number
 #     for i in range(1, int(math.sqrt(number)) + 1):
 #         if number % i == 0:
-#             # If 'i' is a divisor, add it to the sum
 #             divisor_sum += i
 
-#             # If the divisor is not the square root of the number, add its pair
 #             if i != number // i:
 #                 divisor_sum += number // i
 
 #     return divisor_sum
 
-# # Taking user input for the number
 # num = int(input("Enter a number: "))
 
 # result = sum_of_divisors(num)
@@ -32,7 +27,6 @@ def get_divisors(number):
             divisors.append(i)
     return divisors
 
-# Taking user input for the number
 num = int(input("Enter a number: "))
 
 result = get_divisors(num)

@@ -17,7 +17,7 @@ class Post(models.Model):
 # Now, in your Python code (views, scripts, etc.), you can create a new Post object and save it to the database
 
 # Import the Post model
-from your_app.models import Post
+from my_app.models import Post
 
 # Create a new Post object
 new_post = Post(title='New Post Title', content='This is the content of the new post.')
@@ -28,9 +28,3 @@ new_post.save()
 # After saving, the new_post object will have an automatically generated id
 print(f'New Post created with id: {new_post.id}')
 
-"""
-Make sure to replace your_app with the actual name of your Django app. This example assumes that you have already defined a Post model with title and content fields.
-
-Remember to run python manage.py makemigrations and python manage.py migrate in your terminal to apply the changes to the database schema after creating the model or making changes to it.
-
-"""

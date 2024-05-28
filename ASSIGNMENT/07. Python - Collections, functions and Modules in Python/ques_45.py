@@ -6,7 +6,6 @@ data = [
     {'item': 'item1', 'amount': 750}
 ]
 
-# Combine values based on 'item' key
 combined_data = {}
 for entry in data:
     item = entry['item']

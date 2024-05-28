@@ -3,7 +3,7 @@
 """
 To check the installed version of Django, you can use the following command in your terminal or command prompt:
 
-python -m django --version
+py django-admin --version
 
 Running this command will display the installed version of Django in your Python environment.
 

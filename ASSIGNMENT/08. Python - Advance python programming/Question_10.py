@@ -2,23 +2,22 @@
 
 
 def word_count(file_name):
-    word_freq = {}  # Create an empty dictionary to store word frequencies
+    word_freq = {}  
 
     with open(file_name, 'r') as file:
-        words = file.read().split()  # Read the file and split it into words
+        words = file.read().split()  
 
         for word in words:
             if word in word_freq:
-                word_freq[word] += 1  # Increment the count if the word is already in the dictionary
+                word_freq[word] += 1  
             else:
-                word_freq[word] = 1  # Initialize the count if it's a new word
+                word_freq[word] = 1  
 
     return word_freq
 
 file_name = "file_name.txt"
 word_frequencies = word_count(file_name)
 
-# Display word frequencies
 for word, frequency in word_frequencies.items():
     print(f"Word: {word}, Frequency: {frequency}")
 

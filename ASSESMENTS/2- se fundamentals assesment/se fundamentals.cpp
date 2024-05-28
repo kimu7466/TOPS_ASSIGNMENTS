@@ -53,7 +53,7 @@ int main() {
         if (choice == '1') {
             string inputStr;
             cout << "Enter a string: ";
-            cin.ignore(); // Clear the input buffer
+            cin.ignore(); 
             getline(cin, inputStr);
             cout << "Reversed string: " << reverseString(inputStr) << endl;
         }
@@ -61,7 +61,7 @@ int main() {
         else if (choice == '2') {
             string inputStr;
             cout << "Enter a string: ";
-            cin.ignore(); // Clear the input buffer
+            cin.ignore(); 
             getline(cin, inputStr);
             if (isPalindrome(inputStr))
                 cout << "The string is a palindrome." << endl;
@@ -73,7 +73,7 @@ int main() {
             string inputStr;
             char character;
             cout << "Enter a string: ";
-            cin.ignore(); // Clear the input buffer
+            cin.ignore(); 
             getline(cin, inputStr);
             cout << "Enter a character: ";
             cin >> character;
@@ -84,7 +84,7 @@ int main() {
         else if (choice == '4') {
             string inputStr;
             cout << "Enter a string: ";
-            cin.ignore(); // Clear the input buffer
+            cin.ignore(); 
             getline(cin, inputStr);
             pair<int, int> counts = countVowelsConsonants(inputStr);
             cout << "Number of vowels: " << counts.first << endl;

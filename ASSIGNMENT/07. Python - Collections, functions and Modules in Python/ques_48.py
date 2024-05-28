@@ -8,4 +8,3 @@ s = 20
 e = 40
 print(count(list1, s, e))
 
-# output Will be 5 
