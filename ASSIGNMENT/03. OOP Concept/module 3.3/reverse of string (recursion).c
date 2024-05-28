@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-// Recursive function to reverse a string
+
 void reverseString(char str[]) {
     if (str[0] == '\0') {
-        return; // Base case: when the string is empty
+        return; 
     } else {
-        reverseString(str + 1); // Recursive call to reverse the rest of the string
-        putchar(str[0]); // Print the current character
+        reverseString(str + 1); 
+        putchar(str[0]); 
     }
 }
 

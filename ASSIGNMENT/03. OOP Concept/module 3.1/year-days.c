@@ -12,18 +12,18 @@ int main() {
 
     switch (choice) {
         case 1:
-            // Convert years to days
+            
             printf("Enter the number of years: ");
             scanf("%lf", &years);
-            days = years * 365.0; // Assuming all years have 365 days
+            days = years * 365.0; 
             printf("%.2lf years is equal to %.2lf days.\n", years, days);
             break;
 
         case 2:
-            // Convert days to years
+            
             printf("Enter the number of days: ");
             scanf("%lf", &days);
-            years = days / 365.0; // Assuming all years have 365 days
+            years = days / 365.0; 
             printf("%.2lf days is equal to %.2lf years.\n", days, years);
             break;
 

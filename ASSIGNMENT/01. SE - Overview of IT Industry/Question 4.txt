@@ -1,0 +1,80 @@
+Q.4 What is DFD? Create a DFD diagram on Flipkart.
+
+ans:-
+
+ Data Flow Diagram (DFD) Overview
+A Data Flow Diagram (DFD) is a graphical representation of data flow within a system, illustrating how data is processed, stored, and moved between components.
+
+ Key Components
+1. Processes: Circles or rounded rectangles indicating data processing activities.
+2. Data Stores: Open-ended rectangles showing where data is stored.
+3. Data Flows: Arrows indicating the direction of data movement.
+4. External Entities: Rectangles representing entities outside the system interacting with it.
+
+ Example DFD for Flipkart
+
+# Context Level DFD (Level 0)
+A high-level view of the Flipkart system and its interaction with external entities:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
++--------------------------------------+
+|             Flipkart System          |
+|                                      |
+|  +-----------+                       |
+|  | Browse    |<----> User            |
+|  | Products  |                       |
+|  +-----------+                       |
+|  +-----------+                       |
+|  | Place     |<----> Payment Gateway |
+|  | Order     |                       |
+|  +-----------+                       |
+|  +-----------+                       |
+|  | Manage    |<----> Supplier        |
+|  | Inventory |                       |
+|  +-----------+                       |
++--------------------------------------+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# Level 1 DFD
+A detailed view breaking down the main processes:
+
+1. User Registration/Login
+2. Product Browsing
+3. Order Placement
+4. Payment Processing
+5. Inventory Management
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
++--------------------------------------+
+|             Flipkart System          |
+|                                      |
+|  +-------------+                     |
+|  | Registration|<----> User          |
+|  | & Login     |                     |
+|  +-------------+                     |
+|  +-------------+                     |
+|  | Browse      |<----> User          |
+|  | Products    |                     |
+|  +-------------+                     |
+|  +-------------+                     |
+|  | Place       |<----> Payment       |
+|  | Order       |      Gateway        |
+|  +-------------+                     |
+|  +-------------+                     |
+|  | Payment     |<----> Bank/         |
+|  | Processing  |      Payment Gateway|
+|  +-------------+                     |
+|  +-------------+                     |
+|  | Inventory   |<----> Supplier      |
+|  | Management  |                     |
+|  +-------------+                     |
++--------------------------------------+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ Tools to Create DFDs
+- Lucidchart
+- Microsoft Visio
+- Draw.io
+- Creately
+
+These tools provide the necessary symbols and templates to create DFDs easily.

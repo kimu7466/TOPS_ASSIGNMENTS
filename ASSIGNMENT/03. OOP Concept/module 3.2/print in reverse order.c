@@ -6,7 +6,6 @@ int main() {
     printf("Enter a number: ");
     scanf("%lld", &number);
 
-    // Reverse the number
     while (number != 0) {
         int digit = number % 10;
         reversedNumber = reversedNumber * 10 + digit;

@@ -1,13 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+using namespace std;
 
-// Template function to sort an array of any data type
 template <typename T>
 void sortArray(T arr[], int size) {
-    std::vector<T> vec(arr, arr + size); // Convert the array to a vector
-    std::sort(vec.begin(), vec.end());   // Sort the vector
-    std::copy(vec.begin(), vec.end(), arr); // Copy the sorted elements back to the array
+    vector<T> vec(arr, arr + size); 
+    sort(vec.begin(), vec.end());   
+    copy(vec.begin(), vec.end(), arr); 
 }
 
 int main() {
@@ -17,35 +17,33 @@ int main() {
     int intArraySize = sizeof(intArray) / sizeof(intArray[0]);
     int doubleArraySize = sizeof(doubleArray) / sizeof(doubleArray[0]);
 
-    std::cout << "Before sorting intArray: ";
+    cout << "Before sorting intArray: ";
     for (int i = 0; i < intArraySize; i++) {
-        std::cout << intArray[i] << " ";
+        cout << intArray[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
-    // Sort intArray using the template function
     sortArray(intArray, intArraySize);
 
-    std::cout << "After sorting intArray: ";
+    cout << "After sorting intArray: ";
     for (int i = 0; i < intArraySize; i++) {
-        std::cout << intArray[i] << " ";
+        cout << intArray[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
-    std::cout << "Before sorting doubleArray: ";
+    cout << "Before sorting doubleArray: ";
     for (int i = 0; i < doubleArraySize; i++) {
-        std::cout << doubleArray[i] << " ";
+        cout << doubleArray[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
-    // Sort doubleArray using the template function
     sortArray(doubleArray, doubleArraySize);
 
-    std::cout << "After sorting doubleArray: ";
+    cout << "After sorting doubleArray: ";
     for (int i = 0; i < doubleArraySize; i++) {
-        std::cout << doubleArray[i] << " ";
+        cout << doubleArray[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     return 0;
 }

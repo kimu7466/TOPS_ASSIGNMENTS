@@ -6,7 +6,6 @@ int main() {
     printf("Enter a number: ");
     scanf("%lld", &number);
 
-    // Ensure the number is positive by taking its absolute value
     number = (number < 0) ? -number : number;
 
     while (number != 0) {

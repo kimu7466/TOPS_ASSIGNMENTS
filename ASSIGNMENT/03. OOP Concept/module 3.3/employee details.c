@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-// Define the structure to store employee information
 struct employee {
     int empno;
     char empname[50];
@@ -12,7 +11,6 @@ struct employee {
 int main() {
     struct employee emp;
 
-    // Input employee information
     printf("Enter Employee Number: ");
     scanf("%d", &emp.empno);
 
@@ -25,7 +23,6 @@ int main() {
     printf("Enter Employee Age: ");
     scanf("%d", &emp.age);
 
-    // Display employee information
     printf("\nEmployee Information:\n");
     printf("Employee Number: %d\n", emp.empno);
     printf("Employee Name: %s\n", emp.empname);

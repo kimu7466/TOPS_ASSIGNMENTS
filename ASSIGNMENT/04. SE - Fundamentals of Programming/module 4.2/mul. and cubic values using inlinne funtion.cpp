@@ -1,11 +1,10 @@
 #include <iostream>
+using namespace std;
 
-// Inline function to calculate multiplication
 inline double multiply(double x, double y) {
     return x * y;
 }
 
-// Inline function to calculate the cubic value
 inline double cube(double x) {
     return x * x * x;
 }
@@ -13,19 +12,15 @@ inline double cube(double x) {
 int main() {
     double num;
     
-    // Input from the user
-    std::cout << "Enter a number: ";
-    std::cin >> num;
+    cout << "Enter a number: ";
+    cin >> num;
 
-    // Calculate multiplication value using the inline function
     double multiplicationResult = multiply(num, 5.0);
 
-    // Calculate cubic value using the inline function
     double cubicResult = cube(num);
 
-    // Display the results
-    std::cout << "Multiplication result: " << multiplicationResult << std::endl;
-    std::cout << "Cubic result: " << cubicResult << std::endl;
+    cout << "Multiplication result: " << multiplicationResult << endl;
+    cout << "Cubic result: " << cubicResult << endl;
 
     return 0;
 }

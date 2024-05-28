@@ -1,13 +1,11 @@
 #include <stdio.h>
 
-// Function to swap two integers
 void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
-// Function to perform bubble sort on an array in ascending order
 void bubbleSortAsc(int arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
@@ -18,7 +16,6 @@ void bubbleSortAsc(int arr[], int n) {
     }
 }
 
-// Function to perform bubble sort on an array in descending order
 void bubbleSortDesc(int arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {

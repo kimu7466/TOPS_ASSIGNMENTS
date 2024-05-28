@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-// Function to find the maximum number in an array
+
 int findMax(int arr[], int n) {
-    int max = arr[0];  // Initialize max with the first element of the array
+    int max = arr[0];  
 
     for (int i = 1; i < n; i++) {
         if (arr[i] > max) {

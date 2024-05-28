@@ -3,16 +3,13 @@
 int main() {
     char ch;
 
-    // Input a character
     printf("Enter a character: ");
-    scanf(" %c", &ch); // Note the space before %c to consume any whitespace
-
-    // Convert the character to lowercase (if it's an uppercase letter)
+    scanf(" %c", &ch); 
+    
     if (ch >= 'A' && ch <= 'Z') {
-        ch = ch + 32; // Convert to lowercase
+        ch = ch + 32; 
     }
 
-    // Check if the character is a vowel or a consonant using a switch statement
     switch (ch) {
         case 'a':
         case 'e':

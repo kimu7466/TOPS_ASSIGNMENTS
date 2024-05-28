@@ -1,108 +1,90 @@
 #include <iostream>
 #include <string>
+using namespace std;
 
-// Base class Person
 class Person {
 protected:
-    std::string name;
+    string name;
     int age;
 
 public:
-    // Default constructor
     Person() : name(""), age(0) {}
-
-    // Parameterized constructor to initialize data
-    Person(const std::string& _name, int _age) : name(_name), age(_age) {}
-
-    // Member function to read data
+    
+    Person(const string& _name, int _age) : name(_name), age(_age) {}    
+    
     void readData() {
-        std::cout << "Enter Name: ";
-        std::cin.ignore(); // Clear any previous newline character
-        std::getline(std::cin, name);
-        std::cout << "Enter Age: ";
-        std::cin >> age;
+        cout << "Enter Name: ";
+        cin.ignore();  
+        getline(cin, name);
+        cout << "Enter Age: ";
+        cin >> age;
     }
-
-    // Member function to display data
-    void displayData() {
-        std::cout << "Name: " << name << std::endl;
-        std::cout << "Age: " << age << " years" << std::endl;
+    
+    void displayData() const {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << " years" << endl;
     }
 };
 
-// Derived class Student
 class Student : public Person {
 protected:
     double percentage;
 
-public:
-    // Default constructor
+public:    
     Student() : percentage(0.0) {}
 
-    // Parameterized constructor to initialize data
-    Student(const std::string& _name, int _age, double _percentage)
+    Student(const string& _name, int _age, double _percentage)
         : Person(_name, _age), percentage(_percentage) {}
-
-    // Member function to read student-specific data
+    
     void readStudentData() {
-        std::cout << "Enter Percentage: ";
-        std::cin >> percentage;
+        cout << "Enter Percentage: ";
+        cin >> percentage;
     }
-
-    // Member function to display student-specific data
-    void displayStudentData() {
-        std::cout << "Percentage: " << percentage << "%" << std::endl;
+    
+    void displayStudentData() const {
+        cout << "Percentage: " << percentage << "%" << endl;
     }
 };
 
-// Derived class Teacher
 class Teacher : public Person {
 protected:
     double salary;
 
-public:
-    // Default constructor
+public:    
     Teacher() : salary(0.0) {}
 
-    // Parameterized constructor to initialize data
-    Teacher(const std::string& _name, int _age, double _salary)
+    Teacher(const string& _name, int _age, double _salary)
         : Person(_name, _age), salary(_salary) {}
-
-    // Member function to read teacher-specific data
+    
     void readTeacherData() {
-        std::cout << "Enter Salary: $";
-        std::cin >> salary;
+        cout << "Enter Salary: $";
+        cin >> salary;
     }
-
-    // Member function to display teacher-specific data
-    void displayTeacherData() {
-        std::cout << "Salary: $" << salary << std::endl;
+    
+    void displayTeacherData() const {
+        cout << "Salary: $" << salary << endl;
     }
 };
 
 int main() {
     Student student;
     Teacher teacher;
-
-    // Read data for a student
-    std::cout << "Enter Student Information:" << std::endl;
+        
+    cout << "Enter Student Information:" << endl;
     student.readData();
     student.readStudentData();
-
-    // Read data for a teacher
-    std::cout << "\nEnter Teacher Information:" << std::endl;
+    
+    cout << "\nEnter Teacher Information:" << endl;
     teacher.readData();
     teacher.readTeacherData();
-
-    // Display student and teacher information
-    std::cout << "\nStudent Information:" << std::endl;
+    
+    cout << "\nStudent Information:" << endl;
     student.displayData();
     student.displayStudentData();
 
-    std::cout << "\nTeacher Information:" << std::endl;
+    cout << "\nTeacher Information:" << endl;
     teacher.displayData();
     teacher.displayTeacherData();
 
     return 0;
 }
-

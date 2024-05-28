@@ -1,0 +1,100 @@
+Q.5 What is Flow chart? Create a flowchart to make addition of two numbers 
+
+ans:- 
+
+
+
+ Flowchart Overview
+A flowchart is a visual representation of a process or algorithm, showing the steps in a sequential order using different shapes like arrows, rectangles, diamonds, ovals, etc.
+
+ Common Flowchart Symbols
+- Oval: Start or End
+- Rectangle: Process or Action
+- Diamond: Decision
+- Parallelogram: Input/Output
+- Arrow: Flow of Control
+
+ Flowchart for Adding Two Numbers
+
+Here's a simple flowchart to illustrate the addition of two numbers:
+
+1. Start: Begin the process.
+2. Input Number 1: Get the first number.
+3. Input Number 2: Get the second number.
+4. Add Numbers: Sum the two numbers.
+5. Display Result: Show the result of the addition.
+6. End: End the process.
+
+ Flowchart Diagram
+Here's a textual representation of the flowchart:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(Start) -> [Input Number 1] -> [Input Number 2] -> [Add Numbers] -> [Display Result] -> (End)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ Detailed Steps in a Flowchart Diagram
+
+1. Start
+   - Symbol: Oval
+   - Description: Begin the addition process.
+
+2. Input Number 1
+   - Symbol: Parallelogram
+   - Description: Prompt the user to enter the first number.
+
+3. Input Number 2
+   - Symbol: Parallelogram
+   - Description: Prompt the user to enter the second number.
+
+4. Add Numbers
+   - Symbol: Rectangle
+   - Description: Perform the addition of the two numbers.
+
+5. Display Result
+   - Symbol: Parallelogram
+   - Description: Show the result of the addition to the user.
+
+6. End
+   - Symbol: Oval
+   - Description: End the addition process.
+
+ Flowchart Example (Diagram Format)
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  +-------+
+  | Start |
+  +-------+
+      |
+      v
++------------------+
+| Input Number 1   |
++------------------+
+      |
+      v
++------------------+
+| Input Number 2   |
++------------------+
+      |
+      v
++------------------+
+| Add Numbers      |
++------------------+
+      |
+      v
++------------------+
+| Display Result   |
++------------------+
+      |
+      v
+  +-------+
+  | End   |
+  +-------+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ Tools to Create Flowcharts
+- Lucidchart
+- Microsoft Visio
+- Draw.io
+- Creately
+
+These tools provide an intuitive interface to drag and drop symbols to create flowcharts easily.

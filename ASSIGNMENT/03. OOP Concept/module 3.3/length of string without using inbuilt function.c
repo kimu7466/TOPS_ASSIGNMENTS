@@ -5,9 +5,8 @@ int main() {
     int length = 0;
 
     printf("Enter a string: ");
-    gets(str);  // You can also use scanf, but gets is more suitable for string input.
-
-    // Calculate the length of the string
+    gets(str);  
+    
     while (str[length] != '\0') {
         length++;
     }
