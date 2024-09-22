@@ -3,45 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>Responsive Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        /* General reset for padding and margins */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .g-group{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left{
+            margin-left: 5px;
+        }
+
+        .right{
+            margin-right: 5px;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Styling the form elements */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"], 
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* For checkboxes and radio buttons */
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        /* Submit button styling */
+        button[type="submit"] {
+            width: 100%;
+            background-color: #f4b400;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #d19e00;
+        }
+
+        /* Error message styling */
         .error {
             color: red;
             font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        /* Centering the icon inputs */
+        .input-group {
+            position: relative;
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+
+        .input-group input {
+            padding-left: 35px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            form {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            button[type="submit"] {
+                font-size: 14px;
+            }
+        }
+
+        /* Additional styles for better alignment */
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .bottom{
+            padding: 9px;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .radio-group {
+            margin-bottom: 20px;
+            display: flex;
         }
     </style>
 </head>
 <body>
 
-    <h2>Responsive Registration Form</h2>
-
     <form id="registrationForm">
-        <label>Email:</label>
-        <input type="email" id="email" required><br>
-        <label>Password:</label>
-        <input type="password" id="password" required><br>
-        <label>Re-type Password:</label>
-        <input type="password" id="rePassword" required><br>
-        <label>First Name:</label>
-        <input type="text" id="firstName" required><br>
-        <label>Last Name:</label>
-        <input type="text" id="lastName" required><br>
-        <label>Mobile Number:</label>
-        <input type="text" id="mobileNumber" maxlength="10" required><br>
-        <div>
+        <h2>Responsive Registration Form</h2>
+
+        <div class="input-group">
+            <div class="bottom">
+                <i class="fa fa-envelope"></i>
+            </div>
+
+            <input type="email" id="email" placeholder="Email" required>
+        </div>
+
+        <div class="input-group">
+            <div class="bottom">
+                <i class="fa fa-lock"></i>
+            </div>
+
+            <input type="password" id="password" placeholder="Password" required>
+        </div>
+
+        <div class="input-group">
+            <div class="bottom">
+                <i class="fa fa-lock"></i>
+            </div>
+
+            <input type="password" id="rePassword" placeholder="Re-type Password" required>
+        </div>
+
+        <div class="g-group">
+            <div class="input-group right">
+                <div class="bottom">
+                    <i class="fa fa-user"></i>
+                </div>
+
+                <input type="text" id="firstName" placeholder="First Name" required>
+            </div>
+    
+            <div class="input-group left">
+                <div class="bottom">
+                    <i class="fa fa-user"></i>
+                </div>
+
+                <input type="text" id="lastName" placeholder="Last Name" required>
+            </div>
+        </div>
+
+        <div class="radio-group">
             <input type="radio" id="male" name="gender" value="male" required>
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="male" class="right">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female" class="left" required>
             <label for="female">Female</label>
         </div>
-        <label>Country:</label>
-        <select id="country" required>
-            <option value="">Select a country</option>
-            <option value="us">United States</option>
-            <option value="in">India</option>
-        </select><br>
-        <input type="checkbox" id="terms" required>
-        <label>I agree with terms and conditions</label><br>
+
+        <div class="input-group">
+            <select id="country" required>
+                <option value="">Select a country</option>
+                <option value="us">United States</option>
+                <option value="in">India</option>
+            </select>
+        </div>
+
+        <div class="checkbox-label">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I agree with terms and conditions</label>
+        </div>
+
+        <div class="checkbox-label">
+            <input type="checkbox" id="newsletter">
+            <label for="newsletter">I want to receive the newsletter</label>
+        </div>
 
         <button type="submit">Register</button>
     </form>
@@ -61,7 +245,7 @@
         }
 
         function validateForm() {
-            let requiredFields = ['email', 'password', 'rePassword', 'firstName', 'lastName', 'mobileNumber', 'country', 'terms'];
+            let requiredFields = ['email', 'password', 'rePassword', 'firstName', 'lastName', 'country', 'terms'];
             let allValid = true;
 
             requiredFields.forEach(function(fieldId) {
