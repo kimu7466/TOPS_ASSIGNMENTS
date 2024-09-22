@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Responsive Registration Form</h2>
+
+    <form id="registrationForm">
+        <label>Email:</label>
+        <input type="email" id="email" required><br>
+        <label>Password:</label>
+        <input type="password" id="password" required><br>
+        <label>Re-type Password:</label>
+        <input type="password" id="rePassword" required><br>
+        <label>First Name:</label>
+        <input type="text" id="firstName" required><br>
+        <label>Last Name:</label>
+        <input type="text" id="lastName" required><br>
+        <label>Mobile Number:</label>
+        <input type="text" id="mobileNumber" maxlength="10" required><br>
+        <div>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+        </div>
+        <label>Country:</label>
+        <select id="country" required>
+            <option value="">Select a country</option>
+            <option value="us">United States</option>
+            <option value="in">India</option>
+        </select><br>
+        <input type="checkbox" id="terms" required>
+        <label>I agree with terms and conditions</label><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            clearErrors(); // Clear previous errors
+            validateForm(); // Perform validation
+        });
+
+        function clearErrors() {
+            let errorElements = document.querySelectorAll('.error');
+            errorElements.forEach(function(element) {
+                element.remove(); // Remove all error messages
+            });
+        }
+
+        function validateForm() {
+            let requiredFields = ['email', 'password', 'rePassword', 'firstName', 'lastName', 'mobileNumber', 'country', 'terms'];
+            let allValid = true;
+
+            requiredFields.forEach(function(fieldId) {
+                let field = document.getElementById(fieldId);
+                if (field.type === 'checkbox' && !field.checked) {
+                    allValid = false;
+                    showError(field, 'This field is required');
+                } else if (!field.value) {
+                    allValid = false;
+                    showError(field, 'This field is required');
+                }
+            });
+
+            if (document.getElementById('password').value !== document.getElementById('rePassword').value) {
+                allValid = false;
+                showError(document.getElementById('rePassword'), 'Passwords do not match');
+            }
+
+            if (allValid) {
+                alert('Form Submitted Successfully');
+            }
+        }
+
+        function showError(field, message) {
+            let errorElement = document.createElement('div');
+            errorElement.classList.add('error');
+            errorElement.innerText = message;
+            field.parentNode.insertBefore(errorElement, field.nextSibling);
+        }
+
+        document.getElementById('mobileNumber').addEventListener('keypress', function(event) {
+            if (event.key < '0' || event.key > '9') {
+                event.preventDefault(); // Prevent non-numeric input
+            }
+        });
+    </script>
+</body>
+</html>
