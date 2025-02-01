@@ -1,0 +1,19 @@
+.outerBlock {
+  width: 100%;
+  /* margin-left: 40; */
+  margin-top: 10%;
+}
+
+.innerBlock {margin-left: 35%;
+  width: 400px;
+  text-align: center;
+  background-color: black;
+  color: cyan;
+  padding: 20px;
+}
+
+.matter{
+  background-color: cyan;
+  color: black;
+  padding: 10px;
+}
