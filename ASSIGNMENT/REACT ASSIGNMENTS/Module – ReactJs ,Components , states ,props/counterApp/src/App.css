@@ -1,0 +1,33 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .logo {
+    width: 80px;
+  }
+  
+  .counter {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .increment {
+    background-color: green;
+    color: white;
+  }
+  
+  .decrement {
+    background-color: red;
+    color: white;
+  }
+  
