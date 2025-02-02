@@ -29,10 +29,10 @@ const Home = () => {
       <table className="user-table" border={1}>
         <thead>
           <tr>
-            <th>User Firstname</th>
-            <th>User Lastname</th>
-            <th>User Email</th>
-            <th>Actions</th>
+            <th className="cell">User Firstname</th>
+            <th className="cell">User Lastname</th>
+            <th className="cell">User Email</th>
+            <th className="cell">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -44,7 +44,7 @@ const Home = () => {
               <td>
                 <Link to={`/edit/${user.id}`} className="link">Edit</Link>
                 <button onClick={() => deleteUser(user.id)}>Delete</button>
-                <button>View</button>
+                <Link to={`/view/${user.id}`} className="link">view</Link>
               </td>
             </tr>
           ))}

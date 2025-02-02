@@ -19,10 +19,13 @@ const Create = () => {
     <div className="container">
       <h2>Add user</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" value={fname} onChange={(e) => setFname(e.target.value)} required />
-        <input type="text" value={lname} onChange={(e) => setLname(e.target.value)} required />
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <button type="submit">Add user</button>
+        <label htmlFor="">First name : </label>
+        <input type="text" value={fname} onChange={(e) => setFname(e.target.value)} placeholder="Enter First name" required />
+        <label htmlFor="">Last name : </label>
+        <input type="text" value={lname} onChange={(e) => setLname(e.target.value)} placeholder="Enter Last name" required />
+        <label htmlFor="">Email : </label>
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email"  required />
+        <button type="submit">Update</button>
       </form>
     </div>
   );

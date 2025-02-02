@@ -93,3 +93,12 @@ button:hover {
 .link:hover {
   background: #0056b3;
 }
+
+.cell{
+  min-width: 25%;
+}
+
+table{
+  width:100%;
+  text-align: center;
+}
