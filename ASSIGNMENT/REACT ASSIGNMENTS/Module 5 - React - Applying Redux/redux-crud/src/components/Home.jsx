@@ -2,27 +2,21 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers, deleteUser } from "../actions/userActions";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import axios from "axios";
+import "../styles/styles.css";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const [users, setUsers] = useState([]); 
-  
+  const users = useSelector((state) => state.users.users);
+
   useEffect(() => {
-    axios.get("http://localhost:5000/users")
-      .then((response) => {
-        console.log("API Response:", response.data); 
-        setUsers(Array.isArray(response.data) ? response.data : []); 
-      })
-      .catch((error) => console.error("Error fetching users:", error));
-  }, []);
-  
+    dispatch(fetchUsers());
+  }, [dispatch]);
+
   return (
     <div className="container">
       <h2>User List</h2>
       <Link to="/add" className="btn btn-primary">Add User</Link>
-      <table border="1">
+      <table>
         <thead>
           <tr>
             <th>Name</th>
@@ -40,8 +34,8 @@ const Home = () => {
               <td>{user.contact}</td>
               <td>{user.address}</td>
               <td>
-                <button onClick={() => dispatch(deleteUser(user.id))} className="btn btn-danger">Delete</button>
-                <Link to={`/edit/${user.id}`} className="btn btn-primary">Edit</Link>
+                <button onClick={() => dispatch(deleteUser(user.id))}>Delete</button>
+                <Link to={`/edit/${user.id}`}>Edit</Link>
               </td>
             </tr>
           ))}

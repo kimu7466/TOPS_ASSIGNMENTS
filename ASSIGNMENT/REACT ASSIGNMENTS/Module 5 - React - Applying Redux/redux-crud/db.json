@@ -1,39 +1,18 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Adam Marcus",
-      "email": "adam123@gmail.com",
-      "contact": "83673673763763",
-      "address": "UK"
+      "id": "fa39",
+      "name": "imroz khan",
+      "email": "imroz@gmail.com",
+      "contact": "46548971",
+      "address": "rajasthan"
     },
     {
-      "id": "2",
-      "name": "Tommy",
-      "email": "tom@gmail.com",
-      "contact": "8378666476",
-      "address": "Japan"
-    },
-    {
-      "id": "3",
-      "name": "James Bond",
-      "email": "james@gmail.com",
-      "contact": "9464786787",
-      "address": "France"
-    },
-    {
-      "id": "4",
-      "name": "Larry",
-      "email": "larry@gmail.com",
-      "contact": "347864746",
-      "address": "UK"
-    },
-    {
-      "id": "5",
-      "name": "Steve",
-      "email": "steve@gmail.com",
-      "contact": "9348484887",
-      "address": "Australia"
+      "id": "5fdd",
+      "name": "chintan sir",
+      "email": "chintan@gmail.com",
+      "contact": "1233564789",
+      "address": "gujrat"
     }
   ]
 }
