@@ -1,0 +1,33 @@
+
+.app-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.app-title {
+    font-size: 2rem;
+    color: #333;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+body{
+  text-align: center;
+}
+
+#root{
+  margin: 5%;
+}
